@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text gENEMrator</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+   
+          $('.item').on('click',function(e){
+            e.preventDefault();
+            if ( $(this).parent().prop('class') != 'redacao' ){
+               $(this).toggleClass('selected');
+            }
+          });
+          $('.redacao').on('click',function(e){
+            e.preventDefault();
+            if( $('.selected').lenght !== 0 ) {
+              $(this).append($('.selected'));
+              $('.selected').removeClass('selected');
+            }
+          });
+        });
+     </script>
+    <header> 
+        <br>
+        <h1>✧.*✎ text gENEMrator ✎*.✧</h1>
+        <h3> modelo automático de redação</h3>
+        <br>
+    </header>
+    <br>
+    <nav>
+        <h5><a href="https://docs.google.com/document/d/18EUO_1ZjibScr-VSwP2G28NC8aR3984EhBX_-7jwMNo/edit?usp=drive_web&ouid=102198140230354062807" target="_blank">Aprenda a pensar e a escrever sobre um tema a partir do zero.</a> Confira a nota provável do seu texto no site da <a href="http://www.ciraredacoes.com.br/" target="_blank">CIRA</a></h5>
+        <p>Selecione 1 elemento de cada caixa e depois clique na linha preta ao final.</p>
+    </nav>
+    <article>
+        <div class="texto">
+            <div class="introcontainer">
+            <div class="box">
+                <h3>alusão</h3>
+                <div class="eixo">
+                    <span id="adots">ambiental</span><span id="amore">
+                    <div class="item">Na década de 1990, engenheiros desenvolveram os conceitos de pegada ecológica e biocapacidade para mensurar o impacto humano na natureza e alertaram à comunidade científica que a degradação ambiental superava o poder de renovação de recursos da Terra.</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item">5</div>
+                    </span>
+                    <button onclick="amyFunction()" id="amyBtn">...</button>
+                </div>
+                <div class="eixo">
+                    <span id="edots">econômico</span><span id="emore">
+                    <div class="item">1</div>
+                    <div class="item">No livro “Deuses Americanos”, escrito por Neil Gaiman, Dinheiro, Mídia e Tecnologia são os novos deuses que ameaçam o prestígio dos antigos, pois são mais idolatrados no mundo capitalista.</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item">5</div>
+                    </span>
+                    <button onclick="emyFunction()" id="emyBtn">...</button>
+                </div>
+                <div class="eixo">
+                    <span id="pdots">político</span><span id="pmore">
+                    <div class="item">Na obra “A revolução dos bichos”, uma história na qual George Orwell satiriza os processos autoritários de tomada de poder, a elite de porcos propõe aos outros animais da fazenda que todos os animais são iguais, mas alguns são mais iguais que outros.</div>
+                    <div class="item">O artigo 5o, da Constituição Federal de 1989, defende o direito pleno de qualquer cidadão.</div>
+                    <div class="item">A América do Sul sofreu, entre os anos 1960 e 1980, um momento de ditaduras militares-civis em prol de combater o possível expansionismo comunista. Por isso, tal época é lembrada como violenta e regada de censura dos meios de comunicação e do povo.</div>
+                    <div class="item">4</div>
+                    <div class="item">5</div>
+                    </span>
+                    <button onclick="pmyFunction()" id="pmyBtn">...</button>
+                </div>
+                <div class="eixo">
+                    <span id="sdots">social</span><span id="smore">
+                    <div class="item">São Tomás de Aquino defendeu que todas as pessoas precisam ser tratadas com a mesma importância.</div>
+                    <div class="item">Em 1975, o artista pernambucano Di Melo lança seu primeiro álbum e tece críticas à vida maquinal e urbana, as quais são evidentes na música “Conformopolis”. </div>
+                    <div class="item">Fruto da parceria entre artistas brasileiros e a plataforma de streaming Netflix, a bem-sucedida série “Cidade Invisível” promoveu o folclore em uma perspectiva que invisibilizou o povo indígena.</div>
+                    <div class="item">4</div>
+                    <div class="item">5</div>
+                    </span>
+                    <button onclick="smyFunction()" id="smyBtn">...</button>
+                </div>
+                <div class="eixo">
+                    <span id="tdots">tecnológico</span><span id="tmore">
+                    <div class="item">Na série de mangá “Fullmetal Alchemist”, a qual criticamente associa a ciência, o autoritarismo e os sete pecados capitais à bioética, o alquimista Shou Tucker produz uma quimera a partir da própria filha e do seu cachorro de estimação para obter prestígio acadêmico.</div>
+                    <div class="item">No livro “Deuses Americanos”, escrito por Neil Gaiman, Dinheiro, Mídia e Tecnologia são os novos deuses que ameaçam o prestígio dos antigos, pois são mais idolatrados no mundo capitalista.</div>
+                    <div class="item">O mundo globalizado, segundo Milton Santos, é estabelecido pelo meio-técnico-científico-informacional e compreende desigualdades geográficas quanto ao acesso à tecnologia.</div>
+                    <div class="item">4</div>
+                    <div class="item">5</div>
+                    </span>
+                    <button onclick="tmyFunction()" id="tmyBtn">...</button>
+                </div>   
+            </div>
+            <div class="box">
+                <h3>intra-conectivos</h3>
+                <div class="item">Ainda que</div>
+                <div class="item">Ao passo que</div>
+                <div class="item">Apesar de</div>
+                <div class="item">Contudo,</div>
+                <div class="item">Em contraste com</div>
+                <div class="item">Em contrapartida</div>
+                <div class="item">Embora</div>
+                <div class="item">Entretanto,</div>
+                <div class="item">Fora da alusão,</div>
+                <div class="item">Fora da ficção,</div>
+                <div class="item">Mas</div>
+                <div class="item">Não obstante</div>
+                <div class="item">No entanto</div>
+                <div class="item">Porém,</div>
+                <div class="item">Todavia,</div>
+            </div>
+            <div class="box">
+                <h3>problematização</h3>
+                <div class="item">essas entidades tanto auxiliam quanto castigam VÍTIMAS, vide CONTEXTO.</div>
+                <div class="item">quanto à questão da/do TEMA no Brasil, DADOS demonstram que o país ignorou o alerta ao preferir um caminho insustentável.
+                </div>
+                <div class="item">o TEMA também é uma prova de que PALAVRAS CHAVE no Brasil não são valorizadas como deveriam.</div>
+                <div class="item">no século XXI, percebe-se a persistência dessa espécie de violação à liberdade na questão da/do TEMA.
+                </div>
+                <div class="item">percebe-se uma lacuna na garantia desse direito na questão da/do TEMA, o que, além de grave, torna-se um problema inconstitucional.
+                </div>
+            </div>
+            <div class="box">
+                <h3>intra-conectivos</h3>
+                <div class="item">Com isso</div>
+                <div class="item">Dessa forma</div>
+                <div class="item">Diante disso</div>
+                <div class="item">Então</div>
+                <div class="item">Nesse contexto</div>
+                <div class="item">Nesse sentido</div>
+                <div class="item">Tendo isso em vista</div>
+            </div>
+            <div class="box">
+                <h3>tese</h3>
+                <div class="item">percebe-se a configuração de um grave problema
+                    de contornos específicos, em virtude de(a/o) ARGUMENTO 1 e
+                    de(a/o) ARGUMENTO 2.</div>
+                <div class="item">surge a questão da(o) TEMA, que persiste intrínseco(a) à
+                    realidade brasileira, seja pela(o) ARGUMENTO 1 seja pela(o)
+                    ARGUMENTO 2.</div>
+                <div class="item">no que tange à questão do(a) TEMA, percebe-se a
+                    configuração de um grave problema em virtude de(a/o)
+                    ARGUMENTO 1 e de(a/o) ARGUMENTO 2.</div>
+                <div class="item">a/o TEMA é um desafio no Brasil e persiste devido,
+                    não só à/ao ARGUMENTO 1, mas também à/ao ARGUMENTO 2.</div>
+            </div>
+            <div class="box">
+                <h3>argumentos</h3>
+                <div class="item">base educacional</div>
+                <div class="item">preconceito</div>
+                <div class="item">consumismo</div>
+                <div class="item">desigualdade social</div>
+                <div class="item">falta de investimento</div>
+                <div class="item">falta de representatividade</div>
+                <div class="item">formação familiar</div>
+                <div class="item">imediatismo</div>
+                <div class="item">impunidade</div>
+                <div class="item">individualismo</div>
+                <div class="item">insuficiência legislativa</div>
+                <div class="item">irracionalidade</div>
+                <div class="item">legado histórico</div>
+                <div class="item">má influência midiática</div>
+                <div class="item">questões socioculturais</div>
+                <div class="item">receio de denunciar</div>
+                <div class="item">silenciamento</div>
+                <div class="item">uso inadequado da tecnologia</div>
+            </div>
+          </div>
+    </article>
+    <article>
+        <div class="container">
+            <div class="box">
+                <h3>inter-conectivos</h3>
+                <div class="item">A princípio</div>
+                <div class="item">Acima de tudo</div>
+                <div class="item">Antes de tudo</div>
+                <div class="item">Primeiramente</div>
+                <div class="item">Em primeira análise</div>
+                <div class="item">Em primeiro lugar</div>
+                <div class="item">Em primeiro plano</div>
+                <div class="item">Mormente</div>
+            </div>
+            <div class="box">
+                <h3>tópico frasal</h3>
+                <div class="item">a falta de debates sobre o assunto ajuda a perpetuar a problemática.</div>
+                <div class="item">as disparidades socioeconômicas são a parte mais densa do complexo.</div>
+                <div class="item">a irracionalidade científica é insustentável.</div>
+                <div class="item">é preciso atentar para a ARGUMENTO 1 presente na questão.</div>
+                <div class="item">convém ressaltar que a/o ARGUMENTO 1 é um fator determinante
+                    para a persistência do problema.</div>
+                <div class="item">o ARGUMENTO 1 mostra-se como um dos desafios à
+                    resolução do problema.</div>
+                <div class="item">deve-se pontuar, de início, que o/a ARGUMENTO 1 configura-se como um grave
+                    empecilho no que diz respeito à TEMA.</div>
+                <div class="item">pode-se apontar como um empecilho à consolidação de uma
+                    solução, a/o ARGUMENTO 1.</div>
+                <div class="item">evidencia-se que o/a ARGUMENTO 1 é um grande
+                    responsável pela complexidade do problema.</div>
+            </div>
+            <div class="box">
+                <h3>intra-conectivos</h3>
+                <div class="item">Conforme</div>
+                <div class="item">De acordo com</div>
+                <div class="item">Em consonância com</div>
+                <div class="item">Segundo</div>
+                <div class="item">Do ponto de vista de</div>
+                <div class="item">Na concepção de</div>
+            </div>
+            <div class="box">
+                <h3>referências</h3>
+                <div class="item">a ambientalista Vandana Shiva, o mito de que a tecnologia se configura como a solução ideal para tudo, e por isso não deve ser questionada, é prejudicial.</div>
+                <div class="item">o sociólogo Zygmunt Bauman, o homem adotou um modo de pensar mais individualista em sincronia com uma sociedade competitiva e de rápidas mudanças</div>
+                <div class="item">a filosofia foucaultiana, o silenciamento de certos temas confere às mazelas da sociedade o caráter de loucura social. Ou seja, estruturas opressoras tratam anomias como casos raros para se beneficiarem nas relações de poder</div>
+                <div class="item">o pensamento de Claude Lévi-Strauss, só é possível interpretar adequadamente as ações coletivas por meio do entendimento dos eventos históricos.</div>
+                <div class="item">Aristóteles, a política tem como função preservar o afeto entre as pessoas de uma sociedade.</div>
+                <div class="item">o sociólogo Talcott Parsons, a família é uma máquina que produz personalidades humanas.</div>
+                <div class="item"> o filósofo Schopenhauer defende que os limites do campo de visão de uma pessoa determinam seu entendimento a respeito do mundo.</div>
+                <div class="item">Durkheim, o fato social é a maneira coletiva de pensar.</div>
+                <div class="item">o imperativo categórico, de Kant, preconiza que o indivíduo deve agir apenas segundo a máxima que gostaria de ver transformada em lei universal.</div>
+                <div class="item">Pierre Bourdieu, o que foi criado para ser instrumento de democracia não deve ser convertido em mecanismo de opressão.</div>
+            </div>
+            <div class="box">
+                <h3>intra-conectivos</h3>
+                <div class="item">Apesar disso</div>
+                <div class="item">Nessa linha de pensamento</div>
+                <div class="item">Nessa perspectiva</div>
+                <div class="item">Nesse sentido</div>
+                <div class="item">Por essa ótica</div>
+                <div class="item">Sob essa lógica</div>
+            </div>
+            <div class="box">
+                <h3>argumentação</h3>
+                <div class="item">o progresso da ciência que desrespeita limites ecológicos e morais agrava ainda mais a questão da/do TEMA,  vide os “impactos socioambientais”.</div>
+                <div class="item">as poucas contestações aos PALAVRAS CHAVE e às mídias que se calam perante a isso tornam o empecilho mais difícil de se resolver. </div>
+                <div class="item">as preocupações humanas estão voltadas ao imediatismo e à própria personalidade, ou seja, RELACIONAR COM O TEMA.</div>
+                <div class="item">A tese do sociólogo pode ser observada de maneira específica na realidade
+                    brasileira, no que tange a/o TEMA. Essa liquidez que influi sobre a questão
+                    da/do TEMA funciona como um forte empecilho para sua resolução.</div>
+                <div class="item">é possível perceber que a questão do/da TEMA é fortemente
+                    influenciada pelo pensamento coletivo, uma vez que, se as pessoas
+                    crescem inseridas em um contexto social intolerante/opressor/injusto, a
+                    tendência é adotar esse comportamento também, o que torna sua
+                    solução ainda mais complexa.</div>
+                <div class="item">No entanto, no que tange à questão da/do
+                    TEMA há uma lacuna no dever moral quanto ao exercício da denúncia.</div>
+                <div class="item">Nessa perspectiva, pode-se observar que a mídia, em vez de promover debates
+                    que elevem o nível de informação da população, influencia na
+                    consolidação do problema.</div>
+                <div class="item">a/o TEMA, mesmo que fortemente
+                    presente no século XXI, apresenta raízes intrínsecas à história brasileira/ao
+                    passado brasileiro, o que dificulta ainda mais sua resolução.</div>
+                <div class="item">percebe-se uma lacuna, explicitada pela falta
+                    de uma legislação adequada. Assim, sem base legal, ações de
+                    remediação são impossibilitadas, o que acaba por agravar ainda mais a
+                    questão da/do TEMA.</div>
+                <div class="item">a problemática da/do
+                    TEMA apresenta-se como um pensamento passado de geração em
+                    geração, o que dificulta seu extermínio por forças externas, já que o
+                    problema encontra-se dentro das casas das pessoas brasileiras e
+                    estende-se por uma longa linha do tempo.</div>
+                <div class="item">se as pessoas não têm
+                    acesso à informação séria sobre TEMA, sua visão será limitada, o que
+                    dificulta a erradicação do problema.</div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            </div>
+          </div>
+    </article>
+    <article>
+        <div class="container">
+            <div class="box">
+                <h3>inter-conectivos</h3>
+                <div class="item">Ademais</div>
+                <div class="item">Além de</div>
+                <div class="item">Além disso</div>
+                <div class="item">Em consequência disso</div>
+                <div class="item">Em segunda análise</div>
+                <div class="item">Em segundo lugar</div>
+                <div class="item">Em segundo plano</div>
+                <div class="item">Mas também</div>
+                <div class="item">Outrossim</div>
+            </div>
+            <div class="box">
+                <h3>tópico frasal</h3>
+                <div class="item">o ARGUMENTO 2 ainda é um grande impasse para a resolução da
+                    problemática.</div>
+                <div class="item">ressalte-se que o/a ARGUMENTO 2 também configura-se como
+                    um entrave no que tange à questão da/do TEMA.</div>
+                <div class="item">o/a ARGUMENTO 2 apresenta-se como outro fator que
+                    influencia na dificuldade de efetivação da/do TEMA.</div>
+                <div class="item">surge a questão da/do ARGUMENTO 2, que intensifica
+                    a gravidade do problema.</div>
+                <div class="item">outra dificuldade enfrentada é a questão da/do ARGUMENTO 2</div>
+            </div>
+            <div class="box">
+                <h3>intra-conectivos</h3>
+                <div class="item">Conforme</div>
+                <div class="item">De acordo com</div>
+                <div class="item">Segundo</div>
+                <div class="item">Do ponto de vista de</div>
+                <div class="item">Na concepção de</div>
+            </div>
+            <div class="box">
+                <h3>referências</h3>
+                <div class="item">a ambientalista Vandana Shiva, o mito de que a tecnologia se configura como a solução ideal para tudo, e por isso não deve ser questionada, é prejudicial.</div>
+                <div class="item">o sociólogo Zygmunt Bauman, o homem adotou um modo de pensar mais individualista em sincronia com uma sociedade competitiva e de rápidas mudanças</div>
+                <div class="item">a filosofia foucaultiana, o silenciamento de certos temas confere às mazelas da sociedade o caráter de loucura social. Ou seja, estruturas opressoras tratam anomias como casos raros para se beneficiarem nas relações de poder</div>
+                <div class="item">o pensamento de Claude Lévi-Strauss, só é possível interpretar adequadamente as ações coletivas por meio do entendimento dos eventos históricos.</div>
+                <div class="item">Aristóteles, a política tem como função preservar o afeto entre as pessoas de uma sociedade.</div>
+                <div class="item">o sociólogo Talcott Parsons, a família é uma máquina que produz personalidades humanas.</div>
+                <div class="item"> o filósofo Schopenhauer defende que os limites do campo de visão de uma pessoa determinam seu entendimento a respeito do mundo.</div>
+                <div class="item">Durkheim, o fato social é a maneira coletiva de pensar.</div>
+                <div class="item">o imperativo categórico, de Kant, preconiza que o indivíduo deve agir apenas segundo a máxima que gostaria de ver transformada em lei universal.</div>
+                <div class="item">Pierre Bourdieu, o que foi criado para ser instrumento de democracia não deve ser convertido em mecanismo de opressão.</div>
+            </div>
+            <div class="box">
+                <h3>intra-conectivos</h3>
+                <div class="item">Apesar disso</div>
+                <div class="item">Nessa linha de pensamento</div>
+                <div class="item">Nessa perspectiva</div>
+                <div class="item">Nesse sentido</div>
+                <div class="item">Por essa ótica</div>
+                <div class="item">Sob essa lógica</div>
+            </div>
+            <div class="box">
+                <h3>argumentação</h3>
+                <div class="item">o progresso da ciência que desrespeita limites ecológicos e morais agrava ainda mais a questão da/do TEMA,  vide os “impactos socioambientais”.</div>
+                <div class="item">as poucas contestações aos PALAVRAS CHAVE e às mídias que se calam perante a isso tornam o empecilho mais difícil de se resolver. </div>
+                <div class="item">as preocupações humanas estão voltadas ao imediatismo e à própria personalidade, ou seja, RELACIONAR COM O TEMA.</div>
+                <div class="item">A tese do sociólogo pode ser observada de maneira específica na realidade
+                    brasileira, no que tange a/o TEMA. Essa liquidez que influi sobre a questão
+                    da/do TEMA funciona como um forte empecilho para sua resolução.</div>
+                <div class="item">é possível perceber que a questão do/da TEMA é fortemente
+                    influenciada pelo pensamento coletivo, uma vez que, se as pessoas
+                    crescem inseridas em um contexto social intolerante/opressor/injusto, a
+                    tendência é adotar esse comportamento também, o que torna sua
+                    solução ainda mais complexa.</div>
+                <div class="item">No entanto, no que tange à questão da/do
+                    TEMA há uma lacuna no dever moral quanto ao exercício da denúncia.</div>
+                <div class="item">Nessa perspectiva, pode-se observar que a mídia, em vez de promover debates
+                    que elevem o nível de informação da população, influencia na
+                    consolidação do problema.</div>
+                <div class="item">a/o TEMA, mesmo que fortemente
+                    presente no século XXI, apresenta raízes intrínsecas à história brasileira/ao
+                    passado brasileiro, o que dificulta ainda mais sua resolução.</div>
+                <div class="item">percebe-se uma lacuna, explicitada pela falta
+                    de uma legislação adequada. Assim, sem base legal, ações de
+                    remediação são impossibilitadas, o que acaba por agravar ainda mais a
+                    questão da/do TEMA.</div>
+                <div class="item">a problemática da/do
+                    TEMA apresenta-se como um pensamento passado de geração em
+                    geração, o que dificulta seu extermínio por forças externas, já que o
+                    problema encontra-se dentro das casas das pessoas brasileiras e
+                    estende-se por uma longa linha do tempo.</div>
+                <div class="item">se as pessoas não têm
+                    acesso à informação séria sobre TEMA, sua visão será limitada, o que
+                    dificulta a erradicação do problema.</div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            </div>
+          </div>
+    </article>
+    <article>
+        <div class="container">
+            <div class="box">
+                <h3>inter-conectivos</h3>
+                <div class="item">Portanto</div>
+                <div class="item">Então</div>
+                <div class="item">Por tudo isso</div>
+                <div class="item">Sendo assim</div>
+            </div>
+            <div class="box">
+                <h3>tópico frasal</h3>
+                <div class="item">para que a/o PROBLEMA/TEMA deixe de/passe a fazer
+                    parte da realidade brasileira, medidas precisam ser tomadas.</div>
+                <div class="item">medidas estratégicas são necessárias para alterar esse
+                    cenário.</div>
+                <div class="item">é indispensável a adoção de medidas capazes de
+                    assegurar a resolução do problema.</div>
+                <div class="item">indubitavelmente, medidas são necessárias para resolver
+                    esse problema.</div>
+                <div class="item">é evidente que tais entraves precisam ser solucionados.</div>
+            </div>
+            <div class="box">
+                <h3>intra-conectivos</h3>
+                <div class="item">Desse modo</div>
+                <div class="item">Para esse fim</div>
+                <div class="item">Logo</div>
+                <div class="item">Dessa maneira</div>
+            </div>
+            <div class="box">
+                <h3>intervenção</h3>
+                <div class="item">o MEC juntamente com o Ministério da Cultura devem
+                    desenvolver palestras em escolas, a serem webconferenciadas nas redes sociais
+                    desses órgãos, por meio de entrevistas com vítimas do problema e especialistas
+                    no assunto, com o objetivo de trazer mais lucidez sobre o tema E erradicar esse
+                    problema.</div>
+                <div class="item">faz-se necessário que o MEC em parceria com o PNLD (Programa
+                    Nacional do Livro Didático) desenvolvam uma atualização nos livros didáticos de
+                    História, por meio da sugestão de projetos que discutam o legado histórico
+                    brasileiro relacionando-o a problemas atuais. Ademais, tais projetos poderiam
+                    fomentar, até mesmo, a criação de uma Olimpíada de História para o século XXI,
+                    para que a questão da/do TEMA seja compreendida em sua totalidade e possa
+                    proporcionar avanços que o desamarrem de seu passado excludente.</div>
+                <div class="item">é fundamental a criação de projetos de lei que contemplem a questão
+                    da/do TEMA, pelas comissões da Câmara e do Senado, em parceria com
+                    consultas públicas. Tais consultas devem ser amplamente divulgadas nas redes
+                    sociais, para o público em geral ter acesso e se posicionar. Além disso, em tais
+                    consultas, seria viável disponibilizar para download uma cartilha em PDF que
+                    contemple os detalhes da lei proposta, para que o problema da/do TEMA não
+                    só ganhe respaldo legal, como também o faça de maneira consciente por parte
+                    da população.</div>
+                <div class="item">é necessário que as famílias, em parceria com a liderança dos bairros,
+                    exijam do poder público o cumprimento do direito constitucional de proteção a
+                    essas vítimas. Essa exigência deve se dar por meio da produção de ofícios e
+                    cartas de reclamação coletivos, com a descrição de relatos de pessoas da
+                    comunidade que sofrem com esse problema, a serem entregues nas prefeituras,
+                    para que os princípios constitucionais sejam cumpridos.</div>
+                <div class="item">especialistas no assunto, com o apoio de ONGs também especializadas,
+                    devem desenvolver ações que revertam a má influência midiática sobre o/a
+                    TEMA. Tais ações devem ocorrer nas redes sociais, por meio da produção de
+                    vídeos que alertem sobre as reais condições da questão, comparando com o
+                    tratamento que a mídia dá com relatos de pessoas que de fato vivenciaram tal
+                    problema. É possível, também, criar uma "hashtag" para identificar a campanha e
+                    ganhar mais visibilidade, a fim de conscientizar a população sobre as
+                    consequências do tratamento que determinados canais de comunicação dão ao
+                    assunto.</div>
+            </div>
+            <div class="box">
+                <h3>intra-conectivos</h3>
+                <div class="item">A partir dessas ações</div>
+                <div class="item">Assim</div>
+                <div class="item">A partir disso</div>
+            </div>
+            <div class="box">
+                <h3>fechamento</h3>
+                <div class="item">o Brasil poderá superar o/a TEMA.</div>
+                <div class="item">talvez, o universo de ALUSÃO LITERÁRIA permaneça apenas na
+                    ficção.</div>
+                <div class="item">, talvez, seja possível construir um país de que FILÓSOFO/AUTOR
+                    pudesse se orgulhar.</div>
+                <div class="item">espera-se promover a construção de um Brasil melhor.</div>
+                <div class="item">espera-se promover uma melhora no que tange à questão
+                    da/do TEMA.</div>
+            </div>
+          </div>
+
+        </div>
+    
+
+    </div>
+        
+    </article>
+    <div class="redacao"></div>
+
+    <article>
+
+    </article>
+    <footer>
+        <h3> 
+            <p>Colabore com esse projeto enviando sugestões de repertórios no GitHub</p>
+        </h3>
+    </footer>
+</body>
+</html>

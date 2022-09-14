@@ -1,0 +1,331 @@
+h1 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+}
+
+h5 {
+   text-align: center;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+p {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+   background-color: #faf9a6;
+   border-radius: 2%;
+   border-style: dotted;
+   border-width: 2px;
+}
+
+body {
+   background-color: rgb(252, 252, 252);
+   padding: 10%
+}
+
+.texto {
+  display: grid;
+  grid-template-rows: max-content;
+  grid-template-columns: (2, 1fr);
+}
+.introcontainer {
+   display: grid;
+   grid-template-columns: auto;
+   gap: 10px;
+   border: 1px dashed rgb(106, 170, 179);
+   padding: 10px;
+   margin: 10px;
+   border-radius: 1%;
+   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   background-color: aliceblue; 
+}
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px;
+    border: 1px dashed rgb(106, 170, 179);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 1%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: aliceblue;
+  }
+  
+  .box {
+    border: 2px solid rgb(21, 169, 189);
+    background-color: rgb(175, 222, 228);
+    border-radius: .5em;
+    padding: 10px;
+    display: inline-block;
+  }
+
+  .eixo {
+    border: 2px solid rgb(17, 134, 138);
+    background-color: rgb(224, 236, 238);
+    border-radius: .5em;
+    padding: 10px;
+    margin: 3px;
+    display: inline-block;
+  }
+
+  #amyBtn {
+    border: 0;
+    border-radius: 100%;
+    background: #fab255;
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+
+  #emyBtn {
+    border: 0;
+    border-radius: 100%;
+    background: #fab255;
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+
+  #pmyBtn {
+    border: 0;
+    border-radius: 100%;
+    background: #fab255;
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+
+  #smyBtn {
+    border: 0;
+    border-radius: 100%;
+    background: #fab255;
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+
+  #tmyBtn {
+    border: 0;
+    border-radius: 100%;
+    background: #fab255;
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+  
+
+  .item {
+    border: 2px solid rgb(175, 169, 90);
+    background-color: rgb(252, 234, 177);
+    border-radius: .5em;
+    padding: 10px;
+    margin: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    font-weight: 300;
+    font-style: italic;
+    display: inline-block;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.35);
+    transition: transform 0.6s ease-in-out;  
+    transition: box-shadow 0.2s ease-in-out;
+  }
+
+  .item:hover {
+    border: 2px solid black;
+    transform: scale(1.1); 
+    box-shadow: 0 3px 10px rgba(0,0,0,0.6);
+    cursor: pointer;
+  }
+
+  .selected {
+    opacity: .3;
+  }
+
+  .con {
+    background-color: rgb(250, 215, 236);
+    border-radius: .5em;
+    padding: 10px;
+    margin: 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  #cbBtn {
+    border: 0;
+    border-radius: 100%;
+    background: #fab255;
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+
+  #ccBtn {
+    border: 0;
+    border-radius: 100%;
+    background: #fab255;
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+
+  #cdBtn {
+    border: 0;
+    border-radius: 100%;
+    background: #fab255;
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+
+  #ceBtn {
+    border: 0;
+    border-radius: 100%;
+    background: #fab255;
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+
+  #cfBtn {
+    border: 0;
+    border-radius: 100%;
+    background: #fab255;
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+
+  #cgBtn {
+    border: 0;
+    border-radius: 100%;
+    background: #fab255;
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+
+  #chBtn {
+    border: 0;
+    border-radius: 100%;
+    background: #fab255;
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+
+  #ciBtn {
+    border: 0;
+    border-radius: 100%;
+    background: #fab255;
+    color: white;
+    font-family: sans-serif;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem;
+    cursor: pointer;
+  }
+
+  
+
+  .redacao {
+    border: 3px dashed rgb(34, 7, 7);
+    background: rgb(248, 253, 255);
+    display: inline-block;
+    padding: 3%;
+    height: auto;
+    min-width: 460px;
+  }
+
+  .redacao:hover {
+    cursor: pointer;
+  }
+
+#amore {display: none;}
+#emore {display: none;}
+#pmore {display: none;}
+#smore {display: none;}
+#tmore {display: none;}
+#cbcon {display: none;}
+#cccon {display: none;}
+#cdcon {display: none;}
+#cecon {display: none;}
+#cfcon {display: none;}
+#cgcon {display: none;}
+#chcon {display: none;}
+#cicon {display: none;}
