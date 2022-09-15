@@ -1,3 +1,36 @@
+const items = document.querySelectorAll('.item')
+const redacao = document.querySelector('.redacao')
+
+for (let index = 0; index < items.length; index++) {
+  const HTMLElement = items[index];
+  HTMLElement.addEventListener('click', ({ target }) => {
+    if (target.parentNode.classList.contains('redacao')) {
+      return
+    }
+
+    target.classList.toggle('selected');
+  })
+}
+
+redacao.addEventListener('click', ({ target }) => {
+  if (target.classList.contains('item')) {
+    return
+  }
+
+  target.replaceChildren()
+
+  const selectedItems = document.querySelectorAll('.selected')
+  if (selectedItems.length !== 0) {
+    for (let index = 0; index < selectedItems.length; index++) {
+      const element = selectedItems[index];
+      const clone = element.cloneNode(true)
+      clone.classList.remove('selected')
+
+      target.appendChild(clone)
+    }
+  }
+})
+
 function amyFunction() {
   const adots = document.getElementById("adots");
   const amoreText = document.getElementById("amore");
