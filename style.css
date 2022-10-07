@@ -134,10 +134,43 @@ body {
   cursor: pointer;
 }
 
+#a {
+  border: 0;
+  border-radius: 100%;
+  background: #000000;
+  color: white;
+  font-family: sans-serif;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem;
+  cursor: pointer;
+}
+
+.btnbox {
+	display: block;
+	margin: auto;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	transition: 0.5s max-width ease;
+	background-color: #00a08c;
+	max-width: 100%;
+	border-radius: 0px 0px 7px 7px ;
+
+}
+
+.btnbox:hover {
+	color: #000;
+	max-width: 100%;
+}
+
 .redacao {
   border: 3px dashed rgb(34, 7, 7);
   background: rgb(248, 253, 255);
-  display: inline-block;
+  display: grid;
   padding: 3%;
   height: auto;
   min-width: 460px;
@@ -147,18 +180,36 @@ body {
   cursor: pointer;
 }
 
+#introc,
+#problemc,
+#tesec,
+#argc,
+#top1c,
+#refc,
+#argtc,
+#top2c,
+#ref2c,
+#argt2c,
+#top3c,
+#intc,
+#legc,
+#silc,
+#insc,
+#famc,
+#basc,
+#desc,
+#prec,
+#consc,
+#invc,
+#repc,
+#midc,
+#tecc,
+#impc,
+#fecc,
 #amore,
 #emore,
 #pmore,
 #smore,
-#tmore,
-#cbcon,
-#cccon,
-#cdcon,
-#cecon,
-#cfcon,
-#cgcon,
-#chcon,
-#cicon {
+#tmore {
   display: none;
 }

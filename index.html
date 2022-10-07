@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Logo_ENEM_DIGITAL_Colorido-fococ.png">
   <title>text gENEMrator</title>
   <link rel="stylesheet" type="text/css" href="style.css" />
   <script src="index.js" defer></script>
@@ -14,12 +15,12 @@
   <header>
     <br>
     <h1>✧.*✎ text gENEMrator ✎*.✧</h1>
-    <h3> modelo automático de redação</h3>
+    <h3>monte seu modelo de redação</h3>
     <br>
   </header>
   <br>
   <nav>
-    <h5><a
+    <h5>Visite o projeto no <a href="https://github.com/luziasodev/textgENEMrator" target="_blank">GitHub</a>. <a
         href="https://docs.google.com/document/d/18EUO_1ZjibScr-VSwP2G28NC8aR3984EhBX_-7jwMNo/edit?usp=drive_web&ouid=102198140230354062807"
         target="_blank">Aprenda a pensar e a escrever sobre um tema a partir do zero.</a> Confira a nota
       provável do seu texto no site da <a href="http://www.ciraredacoes.com.br/" target="_blank">CIRA</a></h5>
@@ -29,7 +30,7 @@
     <div class="texto">
       <div class="introcontainer">
         <div class="box">
-          <h3>alusão</h3>
+          <span id="intro"><h3>alusão</h3></span><span id="introc"><h3>alusão</h3>
           <div class="eixo">
             <span id="adots">ambiental</span><span id="amore">
               <div class="item">Na década de 1990, engenheiros desenvolveram os conceitos de pegada
@@ -104,6 +105,8 @@
             </span>
             <button onclick="tmyFunction()" id="tmyBtn" class="btn">...</button>
           </div>
+        </span>
+        <button onclick="introFunction()" id="introBtn" class="btnbox">...</button>
         </div>
         <div class="box">
           <h3>intra-conectivos</h3>
@@ -124,7 +127,7 @@
           <div class="item">Todavia,</div>
         </div>
         <div class="box">
-          <h3>problematização</h3>
+          <span id="problem"><h3>problematização</h3></span><span id="problemc"><h3>problematização</h3>
           <div class="item">essas entidades tanto auxiliam quanto castigam VÍTIMAS, vide CONTEXTO.</div>
           <div class="item">quanto à questão da/do TEMA no Brasil, DADOS demonstram que o país ignorou o
             alerta ao preferir um caminho insustentável.
@@ -137,6 +140,8 @@
           <div class="item">percebe-se uma lacuna na garantia desse direito na questão da/do TEMA, o que, além
             de grave, torna-se um problema inconstitucional.
           </div>
+        </span>
+        <button onclick="problemFunction()" id="problemBtn" class="btnbox">...</button>
         </div>
         <div class="box">
           <h3>intra-conectivos</h3>
@@ -149,7 +154,7 @@
           <div class="item">Tendo isso em vista</div>
         </div>
         <div class="box">
-          <h3>tese</h3>
+          <span id="tese"><h3>tese</h3></span><span id="tesec"><h3>tese</h3>
           <div class="item">percebe-se a configuração de um grave problema
             de contornos específicos, em virtude de(a/o) ARGUMENTO 1 e
             de(a/o) ARGUMENTO 2.</div>
@@ -161,9 +166,11 @@
             ARGUMENTO 1 e de(a/o) ARGUMENTO 2.</div>
           <div class="item">a/o TEMA é um desafio no Brasil e persiste devido,
             não só à/ao ARGUMENTO 1, mas também à/ao ARGUMENTO 2.</div>
+          </span>
+          <button onclick="teseFunction()" id="teseBtn" class="btnbox">...</button>
         </div>
         <div class="box">
-          <h3>argumentos</h3>
+          <span id="arg"><h3>argumentos</h3></span><span id="argc"><h3>argumentos</h3>
           <div class="item">base educacional</div>
           <div class="item">preconceito</div>
           <div class="item">consumismo</div>
@@ -182,6 +189,8 @@
           <div class="item">receio de denunciar</div>
           <div class="item">silenciamento</div>
           <div class="item">uso inadequado da tecnologia</div>
+        </span>
+        <button onclick="argFunction()" id="argBtn" class="btnbox">...</button>
         </div>
       </div>
   </article>
@@ -199,7 +208,7 @@
         <div class="item">Mormente</div>
       </div>
       <div class="box">
-        <h3>tópico frasal</h3>
+        <span id="top1"><h3>tópico frasal</h3></span><span id="top1c"><h3>tópico frasal</h3>
         <div class="item">a falta de debates sobre o assunto ajuda a perpetuar a problemática.</div>
         <div class="item">as disparidades socioeconômicas são a parte mais densa do complexo.</div>
         <div class="item">a irracionalidade científica é insustentável.</div>
@@ -213,7 +222,9 @@
         <div class="item">pode-se apontar como um empecilho à consolidação de uma
           solução, a/o ARGUMENTO 1.</div>
         <div class="item">evidencia-se que o/a ARGUMENTO 1 é um grande
-          responsável pela complexidade do problema.</div>
+          responsável pela complexidade do problema.</div>  
+      </span>
+      <button onclick="top1Function()" id="top1Btn" class="btnbox">...</button>
       </div>
       <div class="box">
         <h3>intra-conectivos</h3>
@@ -225,7 +236,7 @@
         <div class="item">Na concepção de</div>
       </div>
       <div class="box">
-        <h3>referências</h3>
+        <span id="ref"><h3>referências</h3></span><span id="refc"><h3>referências</h3>
         <div class="item">a ambientalista Vandana Shiva, o mito de que a tecnologia se configura como a solução
           ideal para tudo, e por isso não deve ser questionada, é prejudicial.</div>
         <div class="item">o sociólogo Zygmunt Bauman, o homem adotou um modo de pensar mais individualista em
@@ -246,6 +257,8 @@
           máxima que gostaria de ver transformada em lei universal.</div>
         <div class="item">Pierre Bourdieu, o que foi criado para ser instrumento de democracia não deve ser
           convertido em mecanismo de opressão.</div>
+      </span>
+      <button onclick="refFunction()" id="refBtn" class="btnbox">...</button>
       </div>
       <div class="box">
         <h3>intra-conectivos</h3>
@@ -257,7 +270,7 @@
         <div class="item">Sob essa lógica</div>
       </div>
       <div class="box">
-        <h3>argumentação</h3>
+        <span id="argt"><h3>argumentação</h3></span><span id="argtc"><h3>argumentação</h3>
         <div class="item">o progresso da ciência que desrespeita limites ecológicos e morais agrava ainda mais a
           questão da/do TEMA, vide os “impactos socioambientais”.</div>
         <div class="item">as poucas contestações aos PALAVRAS CHAVE e às mídias que se calam perante a isso
@@ -294,6 +307,8 @@
           dificulta a erradicação do problema.</div>
         <div class="item"></div>
         <div class="item"></div>
+      </span>
+      <button onclick="argtFunction()" id="argtBtn" class="btnbox">...</button>
       </div>
     </div>
     </div>
@@ -313,7 +328,7 @@
         <div class="item">Outrossim</div>
       </div>
       <div class="box">
-        <h3>tópico frasal</h3>
+        <span id="top2"><h3>tópico frasal</h3></span><span id="top2c"><h3>tópico frasal</h3>
         <div class="item">o ARGUMENTO 2 ainda é um grande impasse para a resolução da
           problemática.</div>
         <div class="item">ressalte-se que o/a ARGUMENTO 2 também configura-se como
@@ -323,6 +338,8 @@
         <div class="item">surge a questão da/do ARGUMENTO 2, que intensifica
           a gravidade do problema.</div>
         <div class="item">outra dificuldade enfrentada é a questão da/do ARGUMENTO 2</div>
+      </span>
+      <button onclick="top2Function()" id="top2Btn" class="btnbox">...</button>
       </div>
       <div class="box">
         <h3>intra-conectivos</h3>
@@ -333,7 +350,7 @@
         <div class="item">Na concepção de</div>
       </div>
       <div class="box">
-        <h3>referências</h3>
+        <span id="ref2"><h3>referências</h3></span><span id="ref2c"><h3>referências</h3>
         <div class="item">a ambientalista Vandana Shiva, o mito de que a tecnologia se configura como a solução
           ideal para tudo, e por isso não deve ser questionada, é prejudicial.</div>
         <div class="item">o sociólogo Zygmunt Bauman, o homem adotou um modo de pensar mais individualista em
@@ -354,6 +371,8 @@
           máxima que gostaria de ver transformada em lei universal.</div>
         <div class="item">Pierre Bourdieu, o que foi criado para ser instrumento de democracia não deve ser
           convertido em mecanismo de opressão.</div>
+      </span>
+      <button onclick="ref2Function()" id="ref2Btn" class="btnbox">...</button>
       </div>
       <div class="box">
         <h3>intra-conectivos</h3>
@@ -365,7 +384,7 @@
         <div class="item">Sob essa lógica</div>
       </div>
       <div class="box">
-        <h3>argumentação</h3>
+        <span id="argt2"><h3>argumentação</h3></span><span id="argt2c"><h3>argumentação</h3>
         <div class="item">o progresso da ciência que desrespeita limites ecológicos e morais agrava ainda mais a
           questão da/do TEMA, vide os “impactos socioambientais”.</div>
         <div class="item">as poucas contestações aos PALAVRAS CHAVE e às mídias que se calam perante a isso
@@ -402,6 +421,8 @@
           dificulta a erradicação do problema.</div>
         <div class="item"></div>
         <div class="item"></div>
+      </span>
+      <button onclick="argt2Function()" id="argt2Btn" class="btnbox">...</button>
       </div>
     </div>
     </div>
@@ -416,7 +437,7 @@
         <div class="item">Sendo assim</div>
       </div>
       <div class="box">
-        <h3>tópico frasal</h3>
+        <span id="top3"><h3>tópico frasal</h3></span><span id="top3c"><h3>tópico frasal</h3>
         <div class="item">para que a/o PROBLEMA/TEMA deixe de/passe a fazer
           parte da realidade brasileira, medidas precisam ser tomadas.</div>
         <div class="item">medidas estratégicas são necessárias para alterar esse
@@ -426,6 +447,8 @@
         <div class="item">indubitavelmente, medidas são necessárias para resolver
           esse problema.</div>
         <div class="item">é evidente que tais entraves precisam ser solucionados.</div>
+      </span>
+      <button onclick="top3Function()" id="top3Btn" class="btnbox">...</button>
       </div>
       <div class="box">
         <h3>intra-conectivos</h3>
@@ -435,42 +458,100 @@
         <div class="item">Dessa maneira</div>
       </div>
       <div class="box">
-        <h3>intervenção</h3>
-        <div class="item">o MEC juntamente com o Ministério da Cultura devem
-          desenvolver palestras em escolas, a serem webconferenciadas nas redes sociais
-          desses órgãos, por meio de entrevistas com vítimas do problema e especialistas
-          no assunto, com o objetivo de trazer mais lucidez sobre o tema E erradicar esse
-          problema.</div>
-        <div class="item">faz-se necessário que o MEC em parceria com o PNLD (Programa
-          Nacional do Livro Didático) desenvolvam uma atualização nos livros didáticos de
-          História, por meio da sugestão de projetos que discutam o legado histórico
-          brasileiro relacionando-o a problemas atuais. Ademais, tais projetos poderiam
-          fomentar, até mesmo, a criação de uma Olimpíada de História para o século XXI,
-          para que a questão da/do TEMA seja compreendida em sua totalidade e possa
-          proporcionar avanços que o desamarrem de seu passado excludente.</div>
-        <div class="item">é fundamental a criação de projetos de lei que contemplem a questão
-          da/do TEMA, pelas comissões da Câmara e do Senado, em parceria com
-          consultas públicas. Tais consultas devem ser amplamente divulgadas nas redes
-          sociais, para o público em geral ter acesso e se posicionar. Além disso, em tais
-          consultas, seria viável disponibilizar para download uma cartilha em PDF que
-          contemple os detalhes da lei proposta, para que o problema da/do TEMA não
-          só ganhe respaldo legal, como também o faça de maneira consciente por parte
-          da população.</div>
-        <div class="item">é necessário que as famílias, em parceria com a liderança dos bairros,
-          exijam do poder público o cumprimento do direito constitucional de proteção a
-          essas vítimas. Essa exigência deve se dar por meio da produção de ofícios e
-          cartas de reclamação coletivos, com a descrição de relatos de pessoas da
-          comunidade que sofrem com esse problema, a serem entregues nas prefeituras,
-          para que os princípios constitucionais sejam cumpridos.</div>
-        <div class="item">especialistas no assunto, com o apoio de ONGs também especializadas,
-          devem desenvolver ações que revertam a má influência midiática sobre o/a
-          TEMA. Tais ações devem ocorrer nas redes sociais, por meio da produção de
-          vídeos que alertem sobre as reais condições da questão, comparando com o
-          tratamento que a mídia dá com relatos de pessoas que de fato vivenciaram tal
-          problema. É possível, também, criar uma "hashtag" para identificar a campanha e
-          ganhar mais visibilidade, a fim de conscientizar a população sobre as
-          consequências do tratamento que determinados canais de comunicação dão ao
-          assunto.</div>
+        <span id="int"><h3>intervenção</h3></span><span id="intc"><h3>intervenção</h3>
+          <div class="eixo">
+            <span id="leg">legado histórico</span><span id="legc">
+              <div class="item">faz-se necessário que o MEC em parceria com o PNLD (Programa Nacional do Livro Didático) desenvolvam uma atualização nos livros didáticos de História, por meio da sugestão de projetos que discutam o legado histórico brasileiro relacionando-o a problemas atuais. Ademais, tais projetos poderiam fomentar, até mesmo, a criação de uma Olimpíada de História para o século XXI, para que a questão da/do TEMA seja compreendida em sua totalidade e possa proporcionar avanços que o desamarrem de seu passado excludente.</div>
+              <div class="item">3</div>
+            </span>
+            <button onclick="legFunction()" id="legBtn" class="btn">...</button>
+          </div>
+          <div class="eixo">
+            <span id="sil">silenciamento</span><span id="silc">
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </span>
+            <button onclick="silFunction()" id="silBtn" class="btn">...</button>
+          </div>
+          <div class="eixo">
+            <span id="ins">insuficiência legislativa</span><span id="insc">
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </span>
+            <button onclick="insFunction()" id="insBtn" class="btn">...</button>
+          </div>
+          <div class="eixo">
+            <span id="fam">formação familiar</span><span id="famc">
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </span>
+            <button onclick="famFunction()" id="famBtn" class="btn">...</button>
+          </div>
+          <div class="eixo">
+            <span id="bas">base educacional</span><span id="basc">
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </span>
+            <button onclick="basFunction()" id="basBtn" class="btn">...</button>
+          </div>    
+          <div class="eixo">
+            <span id="des">desigualdade social</span><span id="desc">
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </span>
+            <button onclick="desFunction()" id="desBtn" class="btn">...</button>
+          </div>
+          <div class="eixo">
+            <span id="pre">preconceito</span><span id="prec">
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </span>
+            <button onclick="preFunction()" id="preBtn" class="btn">...</button>
+          </div>
+          <div class="eixo">
+            <span id="cons">consumismo</span><span id="consc">
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </span>
+            <button onclick="consFunction()" id="consBtn" class="btn">...</button>
+          </div>
+          <div class="eixo">
+            <span id="inv">falta de investimento</span><span id="invc">
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </span>
+            <button onclick="invFunction()" id="invBtn" class="btn">...</button>
+          </div>
+          <div class="eixo">
+            <span id="rep">falta de representatividade</span><span id="repc">
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </span>
+            <button onclick="repFunction()" id="repBtn" class="btn">...</button>
+          </div>
+          <div class="eixo">
+            <span id="mid">má influência midiática</span><span id="midc">
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </span>
+            <button onclick="midFunction()" id="midBtn" class="btn">...</button>
+          </div>
+          <div class="eixo">
+            <span id="tec">uso inadequando da tecnologia</span><span id="tecc">
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </span>
+            <button onclick="tecFunction()" id="tecBtn" class="btn">...</button>
+          </div>
+          <div class="eixo">
+            <span id="imp">impunidade</span><span id="impc">
+              <div class="item">2</div>
+              <div class="item">3</div>
+            </span>
+            <button onclick="impFunction()" id="impBtn" class="btn">...</button>
+          </div>
+      </span>
+      <button onclick="intFunction()" id="intBtn" class="btnbox">...</button>
       </div>
       <div class="box">
         <h3>intra-conectivos</h3>
@@ -479,7 +560,8 @@
         <div class="item">A partir disso</div>
       </div>
       <div class="box">
-        <h3>fechamento</h3>
+        <span id="fec"><h3>fechamento</h3></span><span id="fecc"><h3>fechamento</h3>
+          
         <div class="item">o Brasil poderá superar o/a TEMA.</div>
         <div class="item">talvez, o universo de ALUSÃO LITERÁRIA permaneça apenas na
           ficção.</div>
@@ -488,10 +570,14 @@
         <div class="item">espera-se promover a construção de um Brasil melhor.</div>
         <div class="item">espera-se promover uma melhora no que tange à questão
           da/do TEMA.</div>
+      </span>
+      <button onclick="fecFunction()" id="fecBtn" class="btnbox">...</button>
       </div>
     </div>
 
     </div>
+
+
 
 
     </div>
@@ -504,7 +590,7 @@
   </article>
   <footer>
     <h3>
-      <p>Colabore com esse projeto enviando sugestões de repertórios no GitHub</p>
+      <p>Colabore com esse projeto enviando sugestões de repertórios no <a href="http://www.ciraredacoes.com.br/" target="_blank">GitHub</a></p>
     </h3>
   </footer>
 </body>
