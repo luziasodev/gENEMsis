@@ -10,7 +10,7 @@ for (let index = 0; index < items.length; index++) {
 
     target.classList.toggle('selected');
   })
-}
+} 
 
 redacao.addEventListener('click', ({ target }) => {
   if (target.classList.contains('item')) {
@@ -31,83 +31,60 @@ redacao.addEventListener('click', ({ target }) => {
   }
 })
 
-function amyFunction() {
-  const adots = document.getElementById("adots");
-  const amoreText = document.getElementById("amore");
-  const abtnText = document.getElementById("amyBtn");
+function readMore(hide) {
+  let dots = document.querySelector(`.box[data-hide="${hide}"] .dots`);
+  let moreText = document.querySelector(`.box[data-hide="${hide}"] .more`);
+  let btnText = document.querySelector(`.box[data-hide="${hide}"] .btnbox`);
 
-  if (adots.style.display === "none") {
-    adots.style.display = "inline";
-    abtnText.innerHTML = "...";
-    amoreText.style.display = "none";
+  if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.textContent = "...";
+      moreText.style.display = "none";
   } else {
-    adots.style.display = "none";
-    abtnText.innerHTML = "ocultar";
-    amoreText.style.display = "inline";
+      dots.style.display = "none";
+      btnText.textContent = "ocultar";
+      moreText.style.display = "inline";
   }
 }
 
-function emyFunction() {
-  const edots = document.getElementById("edots");
-  const emoreText = document.getElementById("emore");
-  const ebtnText = document.getElementById("emyBtn");
+function readMore2(hide2) {
+  let dots2 = document.querySelector(`.eixo[data-hide2="${hide2}"] .dots2`);
+  let moreText2 = document.querySelector(`.eixo[data-hide2="${hide2}"] .more2`);
+  let btnText2 = document.querySelector(`.eixo[data-hide2="${hide2}"] .btn2`);
 
-  if (edots.style.display === "none") {
-    edots.style.display = "inline";
-    ebtnText.innerHTML = "...";
-    emoreText.style.display = "none";
+  if (dots2.style.display === "none") {
+      dots2.style.display = "inline";
+      btnText2.textContent = "...";
+      moreText2.style.display = "none";
   } else {
-    edots.style.display = "none";
-    ebtnText.innerHTML = "ocultar";
-    emoreText.style.display = "inline";
+      dots2.style.display = "none";
+      btnText2.textContent = "ocultar";
+      moreText2.style.display = "inline";
   }
 }
 
-function pmyFunction() {
-  const pdots = document.getElementById("pdots");
-  const pmoreText = document.getElementById("pmore");
-  const pbtnText = document.getElementById("pmyBtn");
+function readMore3(hide3) {
+  let dots3 = document.querySelector(`.container[data-hide3="${hide3}"] .dots3`);
+  let moreText3 = document.querySelector(`.container[data-hide3="${hide3}"] .more3`);
+  let btnText3 = document.querySelector(`.container[data-hide3="${hide3}"] .btncontainer`);
 
-  if (pdots.style.display === "none") {
-    pdots.style.display = "inline";
-    pbtnText.innerHTML = "...";
-    pmoreText.style.display = "none";
+  if (dots3.style.display === "none") {
+      dots3.style.display = "inline";
+      btnText3.textContent = "...";
+      moreText3.style.display = "none";
+      
   } else {
-    pdots.style.display = "none";
-    pbtnText.innerHTML = "ocultar";
-    pmoreText.style.display = "inline";
+      dots3.style.display = "none";
+      btnText3.textContent = "ocultar";
+      moreText3.style.display = "inline";
   }
 }
 
-function smyFunction() {
-  const pdots = document.getElementById("sdots");
-  const pmoreText = document.getElementById("smore");
-  const pbtnText = document.getElementById("smyBtn");
-
-  if (pdots.style.display === "none") {
-    pdots.style.display = "inline";
-    pbtnText.innerHTML = "...";
-    pmoreText.style.display = "none";
-  } else {
-    pdots.style.display = "none";
-    pbtnText.innerHTML = "ocultar";
-    pmoreText.style.display = "inline";
-  }
-}
-
-function tmyFunction() {
-  const tdots = document.getElementById("tdots");
-  const tmoreText = document.getElementById("tmore");
-  const tbtnText = document.getElementById("tmyBtn");
-
-  if (tdots.style.display === "none") {
-    tdots.style.display = "inline";
-    tbtnText.innerHTML = "...";
-    tmoreText.style.display = "none";
-  } else {
-    tdots.style.display = "none";
-    tbtnText.innerHTML = "ocultar";
-    tmoreText.style.display = "inline";
-  }
-}
-
+function copyDivToClipboard() {
+  var range = document.createRange();
+  range.selectNode(document.getElementById("copiar"));
+  window.getSelection().removeAllRanges(); 
+  window.getSelection().addRange(range); 
+  document.execCommand("copy");
+  window.getSelection().removeAllRanges();
+ }
