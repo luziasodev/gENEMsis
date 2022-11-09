@@ -13,6 +13,11 @@ h3 {
   font-style: oblique;
 }
 
+h4 {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 h5 {
   text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -24,15 +29,14 @@ p {
 }
 
 header {
-  background-color: #faf9a6;
+  background-color: rgb(231, 251, 255);
   border-radius: 2%;
-  border-style: dotted;
-  border-width: 2px;
+  border: 1px dotted;
 }
 
 body {
   background-color: rgb(252, 252, 252);
-  padding: 10%
+  padding: 5%
 }
 
 .texto {
@@ -70,7 +74,9 @@ body {
   background-color: rgb(175, 222, 228);
   border-radius: .5em;
   padding: 10px;
-  display: inline-block;
+  margin: 10px;
+  display: flexbox;
+  flex-direction: column;
 }
 
 .eixo {
@@ -82,7 +88,28 @@ body {
   display: inline-block;
 }
 
+.main_place {
+  display:inline-block;
+  border: 1px dashed #000;
+}
+
 .item {
+  border: 2px solid rgb(175, 169, 90);
+  background-color: rgb(252, 234, 177);
+  border-radius: .5em;
+  padding: 10px;
+  margin: 3px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 90%;
+  font-weight: 300;
+  font-style: italic;
+  display: inline-block;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.35);
+  transition: transform 0.6s ease-in-out;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.itema {
   border: 2px solid rgb(175, 169, 90);
   background-color: rgb(252, 234, 177);
   border-radius: .5em;
@@ -120,7 +147,7 @@ body {
   font-style: italic;
 }
 
-.btn {
+.btn2 {
   border: 0;
   border-radius: 100%;
   background: #fab255;
@@ -134,31 +161,19 @@ body {
   cursor: pointer;
 }
 
-#a {
-  border: 0;
-  border-radius: 100%;
-  background: #000000;
-  color: white;
-  font-family: sans-serif;
-  line-height: 1.2;
-  white-space: nowrap;
-  text-decoration: none;
-  padding: 0.25rem 0.5rem;
-  margin: 0.25rem;
-  cursor: pointer;
-}
-
 .btnbox {
 	display: block;
 	margin: auto;
+  margin-top: 10px;
 	text-align: center;
 	color: #fff;
+  border: #00a08c;
 	text-decoration: none;
 	font-weight: bold;
 	transition: 0.5s max-width ease;
 	background-color: #00a08c;
 	max-width: 100%;
-	border-radius: 0px 0px 7px 7px ;
+	border-radius: 7px 7px 7px 7px ;
 
 }
 
@@ -167,49 +182,48 @@ body {
 	max-width: 100%;
 }
 
+.btncontainer {
+	display: block;
+	margin: 1;
+	text-align: center;
+	color: #fff;
+  border: #73afa8;
+	text-decoration: none;
+	font-weight: bold;
+	transition: 0.5s max-width ease;
+	background-color: #73afa8;
+	max-width: 100%;
+	border-radius: 0px 0px 7px 7px ;
+
+}
+
+.btncontainer:hover {
+	color: #000;
+	max-width: 100%;
+}
+
+
 .redacao {
   border: 3px dashed rgb(34, 7, 7);
   background: rgb(248, 253, 255);
-  display: grid;
-  padding: 3%;
-  height: auto;
-  min-width: 460px;
+  padding: 10px;
+  display: flexbox;
+  margin: 10px;
+  flex-direction: column;
 }
 
 .redacao:hover {
   cursor: pointer;
 }
 
-#introc,
-#problemc,
-#tesec,
-#argc,
-#top1c,
-#refc,
-#argtc,
-#top2c,
-#ref2c,
-#argt2c,
-#top3c,
-#intc,
-#legc,
-#silc,
-#insc,
-#famc,
-#basc,
-#desc,
-#prec,
-#consc,
-#invc,
-#repc,
-#midc,
-#tecc,
-#impc,
-#fecc,
-#amore,
-#emore,
-#pmore,
-#smore,
-#tmore {
-  display: none;
+#caixatema {
+  display: flex;
+  align-items: center;
+  border: #9dcec8;
+  background-color:  #a5d891;
+}
+
+#tema {
+  display: flex;
+  align-items: center;
 }
