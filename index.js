@@ -13,7 +13,7 @@ for (let index = 0; index < items.length; index++) {
 } 
 
 redacao.addEventListener('click', ({ target }) => {
-  if (target.classList.contains('item')) {
+  if (target.classList.contains('item') || target.classList.contains('main_place') ) {
     return
   }
 
