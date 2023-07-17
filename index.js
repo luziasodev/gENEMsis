@@ -13,7 +13,7 @@ for (let index = 0; index < items.length; index++) {
 } 
 
 redacao.addEventListener('click', ({ target }) => {
-  if (target.classList.contains('item')) {
+  if (target.classList.contains('item') || target.classList.contains('main_place') ) {
     return
   }
 
@@ -88,3 +88,46 @@ function copyDivToClipboard() {
   document.execCommand("copy");
   window.getSelection().removeAllRanges();
  }
+
+ function addTema() {
+  var input = document.getElementById("tema").value; // Obtém o valor do input
+  var divsTema = document.querySelectorAll(".main_place"); // Obtém todas as divs com a classe "tema"
+
+  for (var i = 0; i < divsTema.length; i++) {
+    divsTema[i].innerText = input; // Define o valor do parágrafo em cada div
+  }
+}
+
+function addArgumento() {
+  var div1 = null; // Variável para armazenar a primeira div selecionada
+      var div2 = null; // Variável para armazenar a segunda div selecionada
+
+      for (var i = 1; i <= 18; i++) {
+        var divTexto = document.getElementById("arg" + i);
+        if (divTexto.classList.contains("selecionada")) {
+          if (div1 === null) {
+            div1 = divTexto;
+          } else if (div2 === null) {
+            div2 = divTexto;
+          }
+        }
+      }
+
+      if (div1 !== null && div2 !== null) {
+        var div1_places = document.getElementsByClassName("arg1_place");
+        var div2_places = document.getElementsByClassName("arg2_place");
+
+        for (var j = 0; j < div1_places.length; j++) {
+          div1_places[j].innerText = div1.innerText;
+        }
+
+        for (var k = 0; k < div2_places.length; k++) {
+          div2_places[k].innerText = div2.innerText;
+        }
+      }
+    }
+
+function selecionarDiv(div) {
+  div.classList.toggle("selecionada");
+  addArgumento();
+}
