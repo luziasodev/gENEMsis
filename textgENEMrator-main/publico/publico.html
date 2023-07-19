@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./../assets/icons/Logo_ENEM_DIGITAL_Colorido-fococ.png" />
+    <title>text gENEMrator</title>
+    <link rel="stylesheet" type="text/css" href="publico.css" />
+    <script src="publico.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h3>✧.*✎*.✧</h3>
+      <h1>
+        <img src="./../assets/icons/logobody.png" width="80" /><a
+          href="./../index.html"
+          target="_blank"
+          >EͭNͤEͯMͭrator</a
+        >
+      </h1>
+    </header>
+
+    <div class="pencil">
+      <div id="tutorial" class="navbar tutorialDiv">TUTORIAL</div>
+      <div id="estrutura" class="navbar estruturaDiv">ESTRUTURA</div>
+      <div id="competencias" class="navbar competenciasDiv">COMPETÊNCIAS</div>
+      <div class="top"></div>
+    </div>
+
+    <div id="tutorialAlert" class="modal">
+      <div class="modal-content tutorial">
+        <span class="close-button">&times;</span>
+        <h2>TUTORIAL</h2>
+        <div class="text">
+          <p>
+            Neste tutorial, você aprenderá a realizar uma tarefa importante.
+          </p>
+          <p>
+            Siga as instruções cuidadosamente para obter os melhores resultados.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="estruturaAlert" class="modal">
+      <div class="modal-content estrutura">
+        <span class="close-button">&times;</span>
+        <h2>ESTRUTURA</h2>
+        <div class="table-estrutura">
+          <table>
+            <tr>
+              <th>INTRODUÇÃO</th>
+              <th>DESENVOLVIMENTO</th>
+              <th>CONCLUSÃO</th>
+            </tr>
+            <tr>
+              <td>
+                ALUSÃO
+                <p>Contextualizar com repertório sociocultural</p>
+              </td>
+              <td>
+                TÓPICO FRASAL
+                <p>Apresentação do argumento</p>
+              </td>
+              <td>
+                TÓPICO FRASAL
+                <p>Apresentar conclusão</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                TESE
+                <p>Opinar sobre o tema relacionado à alusão</p>
+              </td>
+              <td>
+                BASE ARGUMENTATIVA
+                <p>Descrever repertório sociocultural</p>
+              </td>
+              <td>
+                PROPOSTA DE INTERVENÇÃO
+                <p>Descrever soluções possíveis ao problema</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                ARGUMENTOS
+                <p>Citar argumentos (causas) plausíveis</p>
+              </td>
+              <td>
+                ARGUMENTAÇÃO
+                <p>Relacionar tema com argumento</p>
+              </td>
+              <td>
+                FECHAMENTO
+                <p>Finalizar conclusão</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="table-estrutura paragrafos">
+          <table>
+            <tr>
+              <td>§1</td>
+              <td>ALUSÃO</td>
+              <td>TESE</td>
+              <td>ARGUMENTOS</td>
+              <td>6 - 7 linhas</td>
+            </tr>
+            <tr>
+              <td>§2</td>
+              <td>TÓPICO FRASAL</td>
+              <td>BASE ARGUMENTATIVA</td>
+              <td>ARGUMENTAÇÃO</td>
+              <td>7 - 8 linhas</td>
+            </tr>
+            <tr>
+              <td>§3</td>
+              <td>TÓPICO FRASAL</td>
+              <td>BASE ARGUMENTATIVA</td>
+              <td>ARGUMENTAÇÃO</td>
+              <td>7 - 8 linhas</td>
+            </tr>
+            <tr>
+              <td>§4</td>
+              <td>TÓPICO FRASAL</td>
+              <td>PROPOSTA DE INTERVENÇÃO</td>
+              <td>FECHAMENTO</td>
+              <td>8 - 9 linhas</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div id="competenciasAlert" class="modal">
+      <div class="modal-content competencias">
+        <span class="close-button">&times;</span>
+        <h2>COMPETÊNCIAS</h2>
+        <div class="text">
+          <p>
+            Neste tutorial, você aprenderá a realizar uma tarefa importante.
+          </p>
+          <p>
+            Siga as instruções cuidadosamente para obter os melhores resultados.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section class="container-redacao">
+      <div id="acervo">
+        <div class="caixatema">
+          <label for="tema"></label>
+          <input
+            type="text"
+            placeholder="Escreva aqui o tema"
+            id="tema"
+            onkeyup="addTema()"
+          />
+        </div>
+        <div class="introcontainer">
+          <!-- introdução -->
+          <div class="container" data-hide3="introducao">
+            <span class="dots3"><h3>introdução</h3></span
+            ><span class="more3" style="display: none"
+              ><h3>introdução</h3>
+
+              <div class="box" data-hide="alusao">
+                <span class="dots"><h3>alusão</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>alusão</h3>
+                  <div class="eixo" data-hide2="ambiental">
+                    <span class="dots2">ambiental</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        Na década de 1990, engenheiros desenvolveram os
+                        conceitos de pegada ecológica e biocapacidade para
+                        mensurar o impacto humano na natureza e advertiram a
+                        comunidade científica de que a degradação ambiental
+                        superava o poder de renovação de recursos da Terra.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('ambiental')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="economico">
+                    <span class="dots2">econômico</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        No livro “Deuses Americanos”, escrito por Neil Gaiman,
+                        Dinheiro, Mídia e Tecnologia são os novos deuses que
+                        ameaçam o prestígio dos antigos, pois são mais
+                        idolatrados no mundo capitalista.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('economico')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="politico">
+                    <span class="dots2">político</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        Na obra “A revolução dos bichos”, uma história na qual
+                        George Orwell satiriza os processos autoritários de
+                        tomada de poder, a elite de porcos propõe aos outros
+                        animais da fazenda que todos os animais são iguais, mas
+                        alguns são mais iguais que outros.
+                      </div>
+                      <div class="item">
+                        O artigo 5o, da Constituição Federal de 1989, defende o
+                        direito pleno de qualquer cidadão.
+                      </div>
+                      <div class="item">
+                        A América do Sul sofreu, entre os anos 1960 e 1980, um
+                        momento de ditaduras militares-civis em prol de combater
+                        o possível expansionismo comunista. Por isso, tal época
+                        é lembrada como violenta e regada de censura dos meios
+                        de comunicação e do povo.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('politico')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="social">
+                    <span class="dots2">social</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        São Tomás de Aquino defendeu que todas as pessoas
+                        precisam ser tratadas com a mesma importância.
+                      </div>
+                      <div class="item">
+                        Em 1975, o artista pernambucano Di Melo lança seu
+                        primeiro álbum e tece críticas à vida maquinal e urbana,
+                        as quais são evidentes na música “Conformopolis”.
+                      </div>
+                      <div class="item">
+                        Fruto da parceria entre artistas brasileiros e a
+                        plataforma de streaming Netflix, a bem-sucedida série
+                        “Cidade Invisível” promoveu o folclore em uma
+                        perspectiva que invisibilizou o povo indígena.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('social')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="tecnologico">
+                    <span class="dots2">tecnológico</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        Na década de 1990, o sociólogo Manuel Castells afirmou
+                        que a consolidação do capitalismo informacional se deu
+                        pela estruturação da sociedade em redes e da influência
+                        da tecnologia na existência individual e coletiva.
+                      </div>
+                      <div class="item">
+                        Na série de mangá “Fullmetal Alchemist”, a qual
+                        criticamente associa a ciência, o autoritarismo e os
+                        sete pecados capitais à bioética, o alquimista Shou
+                        Tucker produz uma quimera a partir da própria filha e do
+                        seu cachorro de estimação para obter prestígio
+                        acadêmico.
+                      </div>
+                      <div class="item">
+                        No livro “Deuses Americanos”, escrito por Neil Gaiman,
+                        Dinheiro, Mídia e Tecnologia são os novos deuses que
+                        ameaçam o prestígio dos antigos, pois são mais
+                        idolatrados no mundo capitalista.
+                      </div>
+                      <div class="item">
+                        O mundo globalizado, segundo Milton Santos, é
+                        estabelecido pelo meio-técnico-científico-informacional
+                        e compreende desigualdades geográficas quanto ao acesso
+                        à tecnologia.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('tecnologico')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                </span>
+                <button onclick="readMore('alusao')" class="btnbox">...</button>
+              </div>
+
+              <div class="box" data-hide="intraconectivos">
+                <span class="dots"><h3>intra-conectivos</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>intra-conectivos</h3>
+                  <div class="item">Ainda que</div>
+                  <div class="item">Ao passo que</div>
+                  <div class="item">Apesar de</div>
+                  <div class="item">Contudo,</div>
+                  <div class="item">Em contraste com</div>
+                  <div class="item">Em contrapartida</div>
+                  <div class="item">Embora</div>
+                  <div class="item">Entretanto,</div>
+                  <div class="item">Fora da alusão,</div>
+                  <div class="item">Fora da ficção,</div>
+                  <div class="item">Mas</div>
+                  <div class="item">Não obstante</div>
+                  <div class="item">No entanto</div>
+                  <div class="item">Porém,</div>
+                  <div class="item">Todavia,</div>
+                </span>
+                <button onclick="readMore('intraconectivos')" class="btnbox">
+                  ...
+                </button>
+              </div>
+
+              <div class="box" data-hide="problematizacao">
+                <span class="dots"><h3>problematização</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>problematização</h3>
+                  <div class="item">
+                    quanto à questão da/do
+                    <div class="main_place">TEMA</div>
+                    no Brasil, DADOS demonstram que o país ignorou o alerta ao
+                    preferir um caminho insustentável.
+                  </div>
+                  <div class="item">
+                    o
+                    <div class="main_place">TEMA</div>
+                    também é uma prova de que PALAVRAS CHAVE no Brasil não são
+                    valorizadas como deveriam.
+                  </div>
+                  <div class="item">
+                    no século XXI, percebe-se a persistência dessa espécie de
+                    violação à liberdade na questão da/do
+                    <div class="main_place">TEMA</div>
+                    .
+                  </div>
+                  <div class="item">
+                    percebe-se uma lacuna na garantia desse direito na questão
+                    da/do
+                    <div class="main_place">TEMA</div>
+                    , o que, além de grave, torna-se um problema
+                    inconstitucional.
+                  </div>
+                </span>
+                <button onclick="readMore('problematizacao')" class="btnbox">
+                  ...
+                </button>
+              </div>
+
+              <div class="box" data-hide="intraconectivos2">
+                <span class="dots"><h3>intra-conectivos</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>intra-conectivos</h3>
+                  <div class="item">Com isso</div>
+                  <div class="item">Dessa forma</div>
+                  <div class="item">Diante disso</div>
+                  <div class="item">Então</div>
+                  <div class="item">Nesse contexto</div>
+                  <div class="item">Nesse sentido</div>
+                  <div class="item">Tendo isso em vista</div>
+                </span>
+                <button onclick="readMore('intraconectivos2')" class="btnbox">
+                  ...
+                </button>
+              </div>
+
+              <div class="box" data-hide="tese">
+                <span class="dots"><h3>tese</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>tese</h3>
+                  <div class="item">
+                    percebe-se a configuração de um grave problema de contornos
+                    específicos, em virtude de(a/o)
+                    <div class="arg1_place">ARGUMENTO 1</div>
+                    e de(a/o)
+                    <div class="arg2_place">ARGUMENTO 2</div>
+                    .
+                  </div>
+                  <div class="item">
+                    surge a questão da(o)
+                    <div class="main_place">TEMA</div>
+                    , que persiste intrínseco(a) à realidade brasileira, seja
+                    pela(o)
+                    <div class="arg1_place">ARGUMENTO 1</div>
+                    seja pela(o)
+                    <div class="arg2_place">ARGUMENTO 2</div>
+                    .
+                  </div>
+                  <div class="item">
+                    no que tange à questão do(a)
+                    <div class="main_place">TEMA</div>
+                    , percebe-se a configuração de um grave problema em virtude
+                    de(a/o)
+                    <div class="arg1_place">ARGUMENTO 1</div>
+                    e de(a/o)
+                    <div class="arg2_place">ARGUMENTO 2</div>
+                    .
+                  </div>
+                  <div class="item">
+                    a/o
+                    <div class="main_place">TEMA</div>
+                    é um desafio no Brasil e persiste devido, não só à/ao
+                    <div class="arg1_place">ARGUMENTO 1</div>
+                    , mas também à/ao
+                    <div class="arg2_place">ARGUMENTO 2</div>
+                    .
+                  </div>
+                </span>
+                <button onclick="readMore('tese')" class="btnbox">...</button>
+              </div>
+
+              <div class="box" data-hide="argumentos">
+                <span class="dots"><h3>argumentos</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>argumentos</h3>
+                  <div class="args" id="arg1" onclick="selecionarDiv(this)">
+                    base educacional
+                  </div>
+                  <div class="args" id="arg2" onclick="selecionarDiv(this)">
+                    consumismo
+                  </div>
+                  <div class="args" id="arg3" onclick="selecionarDiv(this)">
+                    desigualdade social
+                  </div>
+                  <div class="args" id="arg4" onclick="selecionarDiv(this)">
+                    falta de investimento
+                  </div>
+                  <div class="args" id="arg5" onclick="selecionarDiv(this)">
+                    falta de representatividade
+                  </div>
+                  <div class="args" id="arg6" onclick="selecionarDiv(this)">
+                    formação familiar
+                  </div>
+                  <div class="args" id="arg7" onclick="selecionarDiv(this)">
+                    imediatismo
+                  </div>
+                  <div class="args" id="arg8" onclick="selecionarDiv(this)">
+                    impunidade
+                  </div>
+                  <div class="args" id="arg9" onclick="selecionarDiv(this)">
+                    individualismo
+                  </div>
+                  <div class="args" id="arg10" onclick="selecionarDiv(this)">
+                    insuficiência legislativa
+                  </div>
+                  <div class="args" id="arg11" onclick="selecionarDiv(this)">
+                    irracionalidade
+                  </div>
+                  <div class="args" id="arg12" onclick="selecionarDiv(this)">
+                    legado histórico
+                  </div>
+                  <div class="args" id="arg13" onclick="selecionarDiv(this)">
+                    má influência midiática
+                  </div>
+                  <div class="args" id="arg14" onclick="selecionarDiv(this)">
+                    preconceito
+                  </div>
+                  <div class="args" id="arg15" onclick="selecionarDiv(this)">
+                    questões socioculturais
+                  </div>
+                  <div class="args" id="arg16" onclick="selecionarDiv(this)">
+                    receio de denunciar
+                  </div>
+                  <div class="args" id="arg17" onclick="selecionarDiv(this)">
+                    silenciamento
+                  </div>
+                  <div class="args" id="arg18" onclick="selecionarDiv(this)">
+                    uso inadequado da tecnologia
+                  </div>
+                </span>
+                <button onclick="readMore('argumentos')" class="btnbox">
+                  ...
+                </button>
+              </div>
+            </span>
+            <button onclick="readMore3('introducao')" class="btncontainer">
+              ...
+            </button>
+          </div>
+          <!-- desenvolvimento I -->
+          <div class="container" data-hide3="desenvolvimento">
+            <span class="dots3"><h3>desenvolvimento I</h3></span
+            ><span class="more3" style="display: none"
+              ><h3>desenvolvimento I</h3>
+
+              <div class="box" data-hide="interconectivos">
+                <span class="dots"><h3>inter-conectivos</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>inter-conectivos</h3>
+                  <div class="item">A princípio</div>
+                  <div class="item">Acima de tudo</div>
+                  <div class="item">Antes de tudo</div>
+                  <div class="item">Primeiramente</div>
+                  <div class="item">Em primeira análise</div>
+                  <div class="item">Em primeiro lugar</div>
+                  <div class="item">Em primeiro plano</div>
+                  <div class="item">Mormente</div>
+                </span>
+                <button onclick="readMore('interconectivos')" class="btnbox">
+                  ...
+                </button>
+              </div>
+
+              <div class="box" data-hide="top">
+                <span class="dots"><h3>tópico frasal</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>tópico frasal</h3>
+                  <div class="item">
+                    a/o
+                    <div class="arg1_place">ARGUMENTO 1</div>
+                    sobre o assunto ajuda a perpetuar a problemática.
+                  </div>
+                  <div class="item">
+                    as disparidades socioeconômicas são a parte mais densa do
+                    complexo.
+                  </div>
+                  <div class="item">
+                    a/o
+                    <div class="arg1_place">ARGUMENTO 1</div>
+                    é insustentável.
+                  </div>
+                  <div class="item">
+                    é preciso atentar para a/o
+                    <div class="arg1_place">ARGUMENTO 1</div>
+                    presente na questão.
+                  </div>
+                  <div class="item">
+                    convém ressaltar que a/o
+                    <div class="arg1_place">ARGUMENTO 1</div>
+                    é um fator determinante para a persistência do problema.
+                  </div>
+                  <div class="item">
+                    a/o
+                    <div class="arg1_place">ARGUMENTO 1</div>
+                    mostra-se como um dos desafios à resolução do problema.
+                  </div>
+                  <div class="item">
+                    deve-se pontuar, de início, que a/o
+                    <div class="arg1_place">ARGUMENTO 1</div>
+                    configura-se como um grave empecilho no que diz respeito à
+                    <div class="main_place">TEMA</div>
+                    .
+                  </div>
+                  <div class="item">
+                    pode-se apontar como um empecilho à consolidação de uma
+                    solução, a/o
+                    <div class="arg1_place">ARGUMENTO 1</div>
+                    .
+                  </div>
+                  <div class="item">
+                    evidencia-se que a/o
+                    <div class="arg1_place">ARGUMENTO 1</div>
+                    é um grande responsável pela complexidade do problema.
+                  </div>
+                </span>
+                <button onclick="readMore('top')" class="btnbox">...</button>
+              </div>
+
+              <div class="box" data-hide="intraconectivos3">
+                <span class="dots"><h3>intra-conectivos</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>intra-conectivos</h3>
+                  <div class="item">Conforme</div>
+                  <div class="item">De acordo com</div>
+                  <div class="item">Em consonância com</div>
+                  <div class="item">Segundo</div>
+                  <div class="item">Do ponto de vista de</div>
+                  <div class="item">Na concepção de</div>
+                </span>
+                <button onclick="readMore('intraconectivos3')" class="btnbox">
+                  ...
+                </button>
+              </div>
+
+              <div class="box" data-hide="ref">
+                <span class="dots"><h3>referências</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>referências</h3>
+
+                  <div class="eixo" data-hide2="ambiental3">
+                    <span class="dots2">ambiental</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('ambiental3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="economico3">
+                    <span class="dots2">econômico</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('economico3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="politico3">
+                    <span class="dots2">político</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        Aristóteles, a política tem como função preservar o
+                        afeto entre as pessoas de uma sociedade.
+                      </div>
+                      <div class="item">
+                        Pierre Bourdieu, o que foi criado para ser instrumento
+                        de democracia não deve ser convertido em mecanismo de
+                        opressão.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('politico3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="social3">
+                    <span class="dots2">social</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        o sociólogo Zygmunt Bauman, o homem adotou um modo de
+                        pensar mais individualista em sincronia com uma
+                        sociedade competitiva e de rápidas mudanças
+                      </div>
+                      <div class="item">
+                        a filosofia foucaultiana, o silenciamento de certos
+                        temas confere às mazelas da sociedade o caráter de
+                        loucura social. Ou seja, estruturas opressoras tratam
+                        anomias como casos raros para se beneficiarem nas
+                        relações de poder
+                      </div>
+                      <div class="item">
+                        o pensamento de Claude Lévi-Strauss, só é possível
+                        interpretar adequadamente as ações coletivas por meio do
+                        entendimento dos eventos históricos.
+                      </div>
+                      <div class="item">
+                        o sociólogo Talcott Parsons, a família é uma máquina que
+                        produz personalidades humanas.
+                      </div>
+                      <div class="item">
+                        Durkheim, o fato social é a maneira coletiva de pensar.
+                      </div>
+                      <div class="item">
+                        o filósofo Schopenhauer defende que os limites do campo
+                        de visão de uma pessoa determinam seu entendimento a
+                        respeito do mundo.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('social3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="tecnologico3">
+                    <span class="dots2">tecnológico</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        a ambientalista Vandana Shiva, o mito de que a
+                        tecnologia se configura como a solução ideal para tudo,
+                        e por isso não deve ser questionada, é prejudicial.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('tecnologico3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                </span>
+                <button onclick="readMore('ref')" class="btnbox">...</button>
+              </div>
+
+              <div class="box" data-hide="intraconectivos4">
+                <span class="dots"><h3>intra-conectivos</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>intra-conectivos</h3>
+                  <div class="item">Apesar disso</div>
+                  <div class="item">Nessa linha de pensamento</div>
+                  <div class="item">Nessa perspectiva</div>
+                  <div class="item">Nesse sentido</div>
+                  <div class="item">Por essa ótica</div>
+                  <div class="item">Sob essa lógica</div>
+                </span>
+                <button onclick="readMore('intraconectivos4')" class="btnbox">
+                  ...
+                </button>
+              </div>
+
+              <div class="box" data-hide="argumentacao">
+                <span class="dots"><h3>argumentação</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>argumentação</h3>
+
+                  <div class="eixo" data-hide2="base_educacional">
+                    <span class="dots2">base educacional</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        se as pessoas não têm acesso à informação séria sobre
+                        <div class="main_place">TEMA</div>
+                        , sua visão será limitada, o que dificulta a erradicação
+                        do problema.
+                      </div>
+                    </span>
+                    <button
+                      onclick="readMore2('base_educacional')"
+                      class="btn2"
+                    >
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="consumismo">
+                    <span class="dots2">consumismo</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('consumismo')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="desigualdade_social">
+                    <span class="dots2">desigualdade social</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button
+                      onclick="readMore2('desigualdade_social')"
+                      class="btn2"
+                    >
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="investimento">
+                    <span class="dots2">falta de investimento</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('investimento')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="representatividade">
+                    <span class="dots2">falta de representatividade</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button
+                      onclick="readMore2('representatividade')"
+                      class="btn2"
+                    >
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="familia">
+                    <span class="dots2">formação familiar</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        a problemática da/do
+                        <div class="main_place">TEMA</div>
+                        apresenta-se como um pensamento passado de geração em
+                        geração, o que dificulta seu extermínio por forças
+                        externas, já que o problema encontra-se dentro das casas
+                        das pessoas brasileiras e estende-se por uma longa linha
+                        do tempo.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('familia')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="imediatismo">
+                    <span class="dots2">imediatismo</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('imediatismo')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="impunidade">
+                    <span class="dots2">impunidade</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('impunidade')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="individualismo">
+                    <span class="dots2">individualismo</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        as preocupações humanas estão voltadas ao imediatismo e
+                        à própria personalidade, ou seja, RELACIONAR COM O TEMA.
+                      </div>
+                      <div class="item">
+                        a tese do sociólogo pode ser observada de maneira
+                        específica na realidade brasileira, no que tange a/o
+                        <div class="main_place">TEMA</div>
+                        . Essa liquidez que influi sobre a questãoda/do TEMA
+                        funciona como um forte empecilho para sua resolução.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('individualismo')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="legislativo">
+                    <span class="dots2">insuficiência legislativa</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        percebe-se uma lacuna, explicitada pela falta de uma
+                        legislação adequada. Assim, sem base legal, ações de
+                        remediação são impossibilitadas, o que acaba por agravar
+                        ainda mais a questão da/do
+                        <div class="main_place">TEMA</div>
+                        .
+                      </div>
+                    </span>
+                    <button onclick="readMore2('legislativo')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="irracionalidade">
+                    <span class="dots2">irracionalidade</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('irracionalidade')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="historia">
+                    <span class="dots2">legado histórico</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        a/o
+                        <div class="main_place">TEMA</div>
+                        , mesmo que fortemente presente no século XXI, apresenta
+                        raízes intrínsecas à história brasileira/ao passado
+                        brasileiro, o que dificulta ainda mais sua resolução.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('historia')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="midia">
+                    <span class="dots2">má influência midiática</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        pode-se observar que a mídia, em vez de promover debates
+                        que elevem o nível de informação da população,
+                        influencia na consolidação do problema.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('midia')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="preconceito">
+                    <span class="dots2">preconceito</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('preconceito')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="sociocultural">
+                    <span class="dots2">questões socioculturais</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        é possível perceber que a questão do/da
+                        <div class="main_place">TEMA</div>
+                        é fortemente influenciada pelo pensamento coletivo, uma
+                        vez que, se as pessoas crescem inseridas em um contexto
+                        social intolerante/opressor/injusto, a tendência é
+                        adotar esse comportamento também, o que torna sua
+                        solução ainda mais complexa.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('sociocultural')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="receio">
+                    <span class="dots2">receio de denunciar</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        no que tange à questão da/do
+                        <div class="main_place">TEMA</div>
+                        há uma lacuna no dever moral quanto ao exercício da
+                        denúncia.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('receio')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="silenciamento">
+                    <span class="dots2">silenciamento</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        as poucas contestações aos PALAVRAS CHAVE e às mídias
+                        que se calam perante a isso tornam o empecilho mais
+                        difícil de se resolver.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('silenciamento')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="tecnologia">
+                    <span class="dots2">uso inadequado da tecnologia</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        o progresso da ciência que desrespeita limites
+                        ecológicos e morais agrava ainda mais a questão da/do
+                        <div class="main_place">TEMA</div>
+                        , vide os IMPACTOS SOCIOAMBIENTAIS
+                      </div>
+                    </span>
+                    <button onclick="readMore2('tecnologia')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                </span>
+                <button onclick="readMore('argumentacao')" class="btnbox">
+                  ...
+                </button>
+              </div>
+            </span>
+            <button onclick="readMore3('desenvolvimento')" class="btncontainer">
+              ...
+            </button>
+          </div>
+          <!-- desenvolvimento II -->
+          <div class="container" data-hide3="desenvolvimento2">
+            <span class="dots3"><h3>desenvolvimento II</h3></span
+            ><span class="more3" style="display: none"
+              ><h3>desenvolvimento II</h3>
+
+              <div class="box" data-hide="interconectivos2">
+                <span class="dots"><h3>inter-conectivos</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>inter-conectivos</h3>
+                  <div class="item">Ademais</div>
+                  <div class="item">Além de</div>
+                  <div class="item">Além disso</div>
+                  <div class="item">Em consequência disso</div>
+                  <div class="item">Em segunda análise</div>
+                  <div class="item">Em segundo lugar</div>
+                  <div class="item">Em segundo plano</div>
+                  <div class="item">Mas também</div>
+                  <div class="item">Outrossim</div>
+                </span>
+                <button onclick="readMore('interconectivos2')" class="btnbox">
+                  ...
+                </button>
+              </div>
+
+              <div class="box" data-hide="top2">
+                <span class="dots"><h3>tópico frasal</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>tese</h3>
+
+                  <div class="item">
+                    a/o
+                    <div class="arg2_place">ARGUMENTO 2</div>
+                    ainda é um grande impasse para a resolução da problemática.
+                  </div>
+                  <div class="item">
+                    ressalte-se que a/o
+                    <div class="arg2_place">ARGUMENTO 2</div>
+                    também configura-se como um entrave no que tange à questão
+                    da/do
+                    <div class="main_place">TEMA</div>
+                    .
+                  </div>
+                  <div class="item">
+                    a/o
+                    <div class="arg2_place">ARGUMENTO 2</div>
+                    apresenta-se como outro fator que influencia na dificuldade
+                    de efetivação da/do
+                    <div class="main_place">TEMA</div>
+                    .
+                  </div>
+                  <div class="item">
+                    surge a questão da/do
+                    <div class="arg2_place">ARGUMENTO 2</div>
+                    , que intensifica a gravidade do problema.
+                  </div>
+                  <div class="item">
+                    outra dificuldade enfrentada é a questão da/do
+                    <div class="arg2_place">ARGUMENTO 2</div>
+                  </div>
+                </span>
+                <button onclick="readMore('top2')" class="btnbox">...</button>
+              </div>
+
+              <div class="box" data-hide="intraconectivos5">
+                <span class="dots"><h3>intra-conectivos</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>intra-conectivos</h3>
+                  <div class="item">Conforme</div>
+                  <div class="item">De acordo com</div>
+                  <div class="item">Segundo</div>
+                  <div class="item">Do ponto de vista de</div>
+                  <div class="item">Na concepção de</div>
+                </span>
+                <button onclick="readMore('intraconectivos5')" class="btnbox">
+                  ...
+                </button>
+              </div>
+
+              <div class="box" data-hide="ref2">
+                <span class="dots"><h3>referências</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>referências</h3>
+
+                  <div class="eixo" data-hide2="ambiental2">
+                    <span class="dots2">ambiental</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('ambiental2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="economico2">
+                    <span class="dots2">econômico</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('economico2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="politico2">
+                    <span class="dots2">político</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        Aristóteles, a política tem como função preservar o
+                        afeto entre as pessoas de uma sociedade.
+                      </div>
+                      <div class="item">
+                        Pierre Bourdieu, o que foi criado para ser instrumento
+                        de democracia não deve ser convertido em mecanismo de
+                        opressão.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('politico2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="social2">
+                    <span class="dots2">social</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        o sociólogo Zygmunt Bauman, o homem adotou um modo de
+                        pensar mais individualista em sincronia com uma
+                        sociedade competitiva e de rápidas mudanças
+                      </div>
+                      <div class="item">
+                        a filosofia foucaultiana, o silenciamento de certos
+                        temas confere às mazelas da sociedade o caráter de
+                        loucura social. Ou seja, estruturas opressoras tratam
+                        anomias como casos raros para se beneficiarem nas
+                        relações de poder
+                      </div>
+                      <div class="item">
+                        o pensamento de Claude Lévi-Strauss, só é possível
+                        interpretar adequadamente as ações coletivas por meio do
+                        entendimento dos eventos históricos.
+                      </div>
+                      <div class="item">
+                        o sociólogo Talcott Parsons, a família é uma máquina que
+                        produz personalidades humanas.
+                      </div>
+                      <div class="item">
+                        Durkheim, o fato social é a maneira coletiva de pensar.
+                      </div>
+                      <div class="item">
+                        o filósofo Schopenhauer defende que os limites do campo
+                        de visão de uma pessoa determinam seu entendimento a
+                        respeito do mundo.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('social2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="tecnologico2">
+                    <span class="dots2">tecnológico</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        a ambientalista Vandana Shiva, o mito de que a
+                        tecnologia se configura como a solução ideal para tudo,
+                        e por isso não deve ser questionada, é prejudicial.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('tecnologico2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                </span>
+                <button onclick="readMore('ref2')" class="btnbox">...</button>
+              </div>
+
+              <div class="box" data-hide="intraconectivos6">
+                <span class="dots"><h3>intra-conectivos</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>intra-conectivos</h3>
+                  <div class="item">Apesar disso</div>
+                  <div class="item">Nessa linha de pensamento</div>
+                  <div class="item">Nessa perspectiva</div>
+                  <div class="item">Nesse sentido</div>
+                  <div class="item">Por essa ótica</div>
+                  <div class="item">Sob essa lógica</div>
+                </span>
+                <button onclick="readMore('intraconectivos6')" class="btnbox">
+                  ...
+                </button>
+              </div>
+
+              <div class="box" data-hide="argumentacao2">
+                <span class="dots"><h3>argumentação</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>argumentação</h3>
+
+                  <div class="eixo" data-hide2="base_educacional2">
+                    <span class="dots2">base educacional</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        se as pessoas não têm acesso à informação séria sobre
+                        <div class="main_place">TEMA</div>
+                        , sua visão será limitada, o que dificulta a erradicação
+                        do problema.
+                      </div>
+                    </span>
+                    <button
+                      onclick="readMore2('base_educacional2')"
+                      class="btn2"
+                    >
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="consumismo2">
+                    <span class="dots2">consumismo</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('consumismo2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="desigualdade_social2">
+                    <span class="dots2">desigualdade social</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button
+                      onclick="readMore2('desigualdade_social2')"
+                      class="btn2"
+                    >
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="investimento2">
+                    <span class="dots2">falta de investimento</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('investimento2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="representatividade2">
+                    <span class="dots2">falta de representatividade</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button
+                      onclick="readMore2('representatividade2')"
+                      class="btn2"
+                    >
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="familia2">
+                    <span class="dots2">formação familiar</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        a problemática da/do
+                        <div class="main_place">TEMA</div>
+                        apresenta-se como um pensamento passado de geração em
+                        geração, o que dificulta seu extermínio por forças
+                        externas, já que o problema encontra-se dentro das casas
+                        das pessoas brasileiras e estende-se por uma longa linha
+                        do tempo.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('familia2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="imediatismo2">
+                    <span class="dots2">imediatismo</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('imediatismo2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="impunidade2">
+                    <span class="dots2">impunidade</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('impunidade2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="individualismo2">
+                    <span class="dots2">individualismo</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        as preocupações humanas estão voltadas ao imediatismo e
+                        à própria personalidade, ou seja, RELACIONAR COM O TEMA.
+                      </div>
+                      <div class="item">
+                        a tese do sociólogo pode ser observada de maneira
+                        específica na realidade brasileira, no que tange a/o
+                        <div class="main_place">TEMA</div>
+                        . Essa liquidez que influi sobre a questãoda/do
+                        <div class="main_place">TEMA</div>
+                        funciona como um forte empecilho para sua resolução.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('individualismo2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="legislativo2">
+                    <span class="dots2">insuficiência legislativa</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        percebe-se uma lacuna, explicitada pela falta de uma
+                        legislação adequada. Assim, sem base legal, ações de
+                        remediação são impossibilitadas, o que acaba por agravar
+                        ainda mais a questão da/do
+                        <div class="main_place">TEMA</div>
+                        .
+                      </div>
+                    </span>
+                    <button onclick="readMore2('legislativo2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="irracionalidade2">
+                    <span class="dots2">irracionalidade</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button
+                      onclick="readMore2('irracionalidade2')"
+                      class="btn2"
+                    >
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="historia2">
+                    <span class="dots2">legado histórico</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        a/o
+                        <div class="main_place">TEMA</div>
+                        , mesmo que fortemente presente no século XXI, apresenta
+                        raízes intrínsecas à história brasileira/ao passado
+                        brasileiro, o que dificulta ainda mais sua resolução.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('historia2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="midia2">
+                    <span class="dots2">má influência midiática</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        pode-se observar que a mídia, em vez de promover debates
+                        que elevem o nível de informação da população,
+                        influencia na consolidação do problema.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('midia2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="preconceito2">
+                    <span class="dots2">preconceito</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('preconceito2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="sociocultural2">
+                    <span class="dots2">questões socioculturais</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        é possível perceber que a questão do/da
+                        <div class="main_place">TEMA</div>
+                        é fortemente influenciada pelo pensamento coletivo, uma
+                        vez que, se as pessoas crescem inseridas em um contexto
+                        social intolerante/opressor/injusto, a tendência é
+                        adotar esse comportamento também, o que torna sua
+                        solução ainda mais complexa.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('sociocultural2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="receio2">
+                    <span class="dots2">receio de denunciar</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        no que tange à questão da/do
+                        <div class="main_place">TEMA</div>
+                        há uma lacuna no dever moral quanto ao exercício da
+                        denúncia.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('receio2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="silenciamento2">
+                    <span class="dots2">silenciamento</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        as poucas contestações aos PALAVRAS CHAVE e às mídias
+                        que se calam perante a isso tornam o empecilho mais
+                        difícil de se resolver.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('silenciamento2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+
+                  <div class="eixo" data-hide2="tecnologia2">
+                    <span class="dots2">uso inadequado da tecnologia</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        o progresso da ciência que desrespeita limites
+                        ecológicos e morais agrava ainda mais a questão da/do
+                        <div class="main_place">TEMA</div>
+                        , vide os IMPACTOS SOCIOAMBIENTAIS
+                      </div>
+                    </span>
+                    <button onclick="readMore2('tecnologia2')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                </span>
+                <button onclick="readMore('argumentacao2')" class="btnbox">
+                  ...
+                </button>
+              </div>
+            </span>
+            <button
+              onclick="readMore3('desenvolvimento2')"
+              class="btncontainer"
+            >
+              ...
+            </button>
+          </div>
+          <!-- conclusão -->
+          <div class="container" data-hide3="conclusao">
+            <span class="dots3"><h3>conclusão</h3></span
+            ><span class="more3" style="display: none"
+              ><h3>conclusão</h3>
+
+              <div class="box" data-hide="interconectivos3">
+                <span class="dots"><h3>inter-conectivos</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>inter-conectivos</h3>
+                  <div class="item">Portanto</div>
+                  <div class="item">Então</div>
+                  <div class="item">Por tudo isso</div>
+                  <div class="item">Sendo assim</div>
+                </span>
+                <button onclick="readMore('interconectivos3')" class="btnbox">
+                  ...
+                </button>
+              </div>
+
+              <div class="box" data-hide="top3">
+                <span class="dots"><h3>tópico frasal</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>tópico frasal</h3>
+
+                  <div class="item">
+                    para que a/o
+                    <div class="main_place">TEMA</div>
+                    deixe de/passe a fazer parte da realidade brasileira,
+                    medidas precisam ser tomadas.
+                  </div>
+                  <div class="item">
+                    medidas estratégicas são necessárias para alterar esse
+                    cenário.
+                  </div>
+                  <div class="item">
+                    é indispensável a adoção de medidas capazes de assegurar a
+                    resolução do problema.
+                  </div>
+                  <div class="item">
+                    indubitavelmente, medidas são necessárias para resolver esse
+                    problema.
+                  </div>
+                  <div class="item">
+                    é evidente que tais entraves precisam ser solucionados.
+                  </div>
+                </span>
+                <button onclick="readMore('top3')" class="btnbox">...</button>
+              </div>
+
+              <div class="box" data-hide="intraconectivos7">
+                <span class="dots"><h3>intra-conectivos</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>intra-conectivos</h3>
+                  <div class="item">Desse modo</div>
+                  <div class="item">Para esse fim</div>
+                  <div class="item">Logo</div>
+                  <div class="item">Dessa maneira</div>
+                </span>
+                <button onclick="readMore('intraconectivos7')" class="btnbox">
+                  ...
+                </button>
+              </div>
+
+              <div class="box" data-hide="intervencao">
+                <span class="dots"><h3>intervenção</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>intervenção</h3>
+
+                  <div class="eixo" data-hide2="base_educacional3">
+                    <span class="dots2">base educacional</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button
+                      onclick="readMore2('base_educacional3')"
+                      class="btn2"
+                    >
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="consumismo3">
+                    <span class="dots2">consumismo</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('consumismo3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="desigualdade_social3">
+                    <span class="dots2">desigualdade social</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button
+                      onclick="readMore2('desigualdade_social3')"
+                      class="btn2"
+                    >
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="investimento3">
+                    <span class="dots2">falta de investimento</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('investimento3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="representatividade3">
+                    <span class="dots2">falta de representatividade</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button
+                      onclick="readMore2('representatividade3')"
+                      class="btn2"
+                    >
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="familia3">
+                    <span class="dots2">formação familiar</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('familia3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="imediatismo3">
+                    <span class="dots2">imediatismo</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('imediatismo3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="impunidade3">
+                    <span class="dots2">impunidade</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('impunidade3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="individualismo3">
+                    <span class="dots2">individualismo</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('individualismo3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="legislativo3">
+                    <span class="dots2">insuficiência legislativa</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        É fundamental a criação de projetos de lei que
+                        contemplem a questão da/do
+                        <div class="main_place">TEMA</div>
+                        , pelas comissões da Câmara e do Senado, em parceria com
+                        consultas públicas. Tais consultas devem ser amplamente
+                        divulgadas nas redes sociais, para o público em geral
+                        ter acesso e se posicionar. Além disso, em tais
+                        consultas, seria viável disponibilizar para download uma
+                        cartilha em PDF que contemple os detalhes da lei
+                        proposta, para que o problema da/do
+                        <div class="main_place">TEMA</div>
+                        não só ganhe respaldo legal, como também o faça de
+                        maneira consciente por parte da população.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('legislativo3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="irracionalidade3">
+                    <span class="dots2">irracionalidade</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button
+                      onclick="readMore2('irracionalidade3')"
+                      class="btn2"
+                    >
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="historia3">
+                    <span class="dots2">legado histórico</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        faz-se necessário que o MEC em parceria com o PNLD
+                        (Programa Nacional do Livro Didático) desenvolvam uma
+                        atualização nos livros didáticos de História, por meio
+                        da sugestão de projetos que discutam o legado histórico
+                        brasileiro relacionando-o a problemas atuais. Ademais,
+                        tais projetos poderiam fomentar, até mesmo, a criação de
+                        uma Olimpíada de História para o século XXI, para que a
+                        questão da/do
+                        <div class="main_place">TEMA</div>
+                        seja compreendida em sua totalidade e possa proporcionar
+                        avanços que o desamarrem de seu passado excludente.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('historia3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="midia3">
+                    <span class="dots2">má influência midiática</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">
+                        especialistas no assunto, com o apoio de ONGs também
+                        especializadas, devem desenvolver ações que revertam a
+                        má influência midiática sobre o/a
+                        <div class="main_place">TEMA</div>
+                        . Tais ações devem ocorrer nas redes sociais, por meio
+                        da produção de vídeos que alertem sobre as reais
+                        condições da questão, comparando com o tratamento que a
+                        mídia dá com relatos de pessoas que de fato vivenciaram
+                        tal problema. É possível, também, criar uma "hashtag"
+                        para identificar a campanha e ganhar mais visibilidade,
+                        a fim de conscientizar a população sobre as
+                        consequências do tratamento que determinados canais de
+                        comunicação dão ao assunto.
+                      </div>
+                    </span>
+                    <button onclick="readMore2('midia3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="preconceito3">
+                    <span class="dots2">preconceito</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('preconceito3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="sociocultural3">
+                    <span class="dots2">questões socioculturais</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('sociocultural3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="receio3">
+                    <span class="dots2">receio de denunciar</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('receio3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="silenciamento3">
+                    <span class="dots2">silenciamento</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('silenciamento3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                  <div class="eixo" data-hide2="tecnologia3">
+                    <span class="dots2">uso inadequado da tecnologia</span
+                    ><span class="more2" style="display: none">
+                      <div class="item">5</div>
+                    </span>
+                    <button onclick="readMore2('tecnologia3')" class="btn2">
+                      ...
+                    </button>
+                  </div>
+                </span>
+                <button onclick="readMore('intervencao')" class="btnbox">
+                  ...
+                </button>
+              </div>
+
+              <div class="box" data-hide="intraconectivos8">
+                <span class="dots"><h3>intra-conectivos</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>intra-conectivos</h3>
+                  <div class="item">A partir dessas ações</div>
+                  <div class="item">Assim</div>
+                  <div class="item">A partir disso</div>
+                </span>
+                <button onclick="readMore('intraconectivos8')" class="btnbox">
+                  ...
+                </button>
+              </div>
+
+              <div class="box" data-hide="fechamento">
+                <span class="dots"><h3>fechamento</h3></span
+                ><span class="more" style="display: none"
+                  ><h3>fechamento</h3>
+                  <div class="item">
+                    , o Brasil poderá superar o/a
+                    <div class="main_place">TEMA</div>
+                    .
+                  </div>
+                  <div class="item">
+                    , talvez, o universo de ALUSÃO LITERÁRIA permaneça apenas na
+                    ficção.
+                  </div>
+                  <div class="item">
+                    , talvez, seja possível construir um país de que
+                    FILÓSOFO/AUTOR pudesse se orgulhar.
+                  </div>
+                  <div class="item">
+                    , espera-se promover a construção de um Brasil melhor.
+                  </div>
+                  <div class="item">
+                    , espera-se promover uma melhora no que tange à questão
+                    da/do
+                    <div class="main_place">TEMA</div>
+                    .
+                  </div>
+                </span>
+                <button onclick="readMore('fechamento')" class="btnbox">
+                  ...
+                </button>
+              </div>
+            </span>
+            <button onclick="readMore3('conclusao')" class="btncontainer">
+              ...
+            </button>
+          </div>
+        </div>
+      </div>
+      <div id="rascunho">
+        <div class="caixatema"><h2>Redação</h2></div>
+        <br />
+        <div class="redacao" id="copiar" onclick="copyDivToClipboard()"></div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="dev">
+        <h3>
+          <p>
+            
+            <a href="https://github.com/luziasodev/textgENEMrator" target="_blank"
+              >Seja um colaborador do projeto. Envie sugestões de repertórios no GitHub</a
+            >
+          </p>
+        </h3>
+        <p>Desenvolvido por </p>
+      </div>
+      
+      
+    </footer>
+  </body>
+</html>
