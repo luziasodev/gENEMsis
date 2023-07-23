@@ -49,6 +49,36 @@ document.getElementById("competencias").addEventListener("click", function () {
   });
 });
 
+const carouselInner = document.querySelector(".carousel-inner");
+const tables = carouselInner.querySelectorAll("table");
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
+
+let currentSlide = 0;
+
+function showSlide(slideIndex) {
+  tables.forEach((table, index) => {
+    if (index === slideIndex) {
+      table.classList.add("active");
+    } else {
+      table.classList.remove("active");
+    }
+  });
+}
+
+function prevTable() {
+  currentSlide = (currentSlide - 1 + tables.length) % tables.length;
+  showSlide(currentSlide);
+}
+
+function nextTable() {
+  currentSlide = (currentSlide + 1) % tables.length;
+  showSlide(currentSlide);
+}
+
+// Exibir a primeira tabela inicialmente
+showSlide(currentSlide);
+
 const items = document.querySelectorAll(".item");
 const redacao = document.querySelector(".redacao");
 
@@ -149,21 +179,21 @@ function copyDivToClipboard() {
 }
 
 function addTema() {
-  var input = document.getElementById("tema").value; // Obtém o valor do input
-  var divsTema = document.querySelectorAll(".main_place"); // Obtém todas as divs com a classe "tema"
+  var input = document.getElementById("tema").value; 
+  var divsTema = document.querySelectorAll(".main_place"); 
 
   for (var i = 0; i < divsTema.length; i++) {
-    divsTema[i].innerText = input; // Define o valor do parágrafo em cada div
+    divsTema[i].innerText = input;
   }
 }
 
 function addArgumento() {
-  var div1 = null; // Variável para armazenar a primeira div selecionada
-  var div2 = null; // Variável para armazenar a segunda div selecionada
+  var div1 = null; 
+  var div2 = null; 
 
   for (var i = 1; i <= 18; i++) {
     var divTexto = document.getElementById("arg" + i);
-    if (divTexto.classList.contains("selecionada")) {
+    if (divTexto.classList.contains("selecionado")) {
       if (div1 === null) {
         div1 = divTexto;
       } else if (div2 === null) {
@@ -187,6 +217,8 @@ function addArgumento() {
 }
 
 function selecionarDiv(div) {
-  div.classList.toggle("selecionada");
+  div.classList.toggle("selecionado");
   addArgumento();
 }
+
+

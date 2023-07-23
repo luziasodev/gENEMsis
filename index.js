@@ -1,21 +1,21 @@
 // post-it sobre
 document.getElementById("sobre").addEventListener("click", function () {
-    var modal = document.getElementById("sobreAlert");
-    modal.style.display = "block";
-  
-    var closeButton = document.getElementsByClassName("close-button")[0];
-    closeButton.addEventListener("click", function () {
-      modal.style.display = "none";
-    });
-  
-    window.addEventListener("click", function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    });
+  var modal = document.getElementById("sobreAlert");
+  modal.style.display = "block";
+
+  var closeButton = document.getElementsByClassName("close-button")[0];
+  closeButton.addEventListener("click", function () {
+    modal.style.display = "none";
   });
 
-  // post-it acervo pessoal
+  window.addEventListener("click", function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+
+// post-it acervo pessoal
 document.getElementById("user2").addEventListener("click", function () {
   var modal = document.getElementById("user2Alert");
   modal.style.display = "block";

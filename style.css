@@ -159,7 +159,6 @@ p {
   cursor: pointer;
 }
 
-
 .acervo {
   display: grid;
   justify-content: center;
@@ -177,7 +176,6 @@ p {
   padding: 20px;
   height: 300px;
   gap: 20px;
-  
 }
 
 #user1,
@@ -273,9 +271,16 @@ input[type="submit"]:hover {
   background-color: rgb(63, 161, 161);
 }
 
-
 .dev {
   position: relative;
-  margin-top: 30.3vh;
+  margin-top: 9vh;
   margin-bottom: 0;
+}
+
+.dev a {
+  color: #00a08c;
+}
+
+.dev a:hover {
+  color: rgb(212, 103, 216);
 }

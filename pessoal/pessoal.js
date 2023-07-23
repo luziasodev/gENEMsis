@@ -32,7 +32,7 @@ document.getElementById("estrutura").addEventListener("click", function () {
   });
 });
 
-// post-it configurar competencias
+// post-it competencias
 document.getElementById("competencias").addEventListener("click", function () {
   var modal = document.getElementById("competenciasAlert");
   modal.style.display = "block";
@@ -49,74 +49,35 @@ document.getElementById("competencias").addEventListener("click", function () {
   });
 });
 
-// post-it repertorios
-document.getElementById("repertorios").addEventListener("click", function () {
-  var modal = document.getElementById("repertoriosAlert");
-  modal.style.display = "block";
+const carouselInner = document.querySelector(".carousel-inner");
+const tables = carouselInner.querySelectorAll("table");
+const prevBtn = document.querySelector(".prev-btn");
+const nextBtn = document.querySelector(".next-btn");
 
-  var closeButton = document.getElementsByClassName("close-button")[3];
-  closeButton.addEventListener("click", function () {
-    modal.style.display = "none";
-  });
+let currentSlide = 0;
 
-  window.addEventListener("click", function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
+function showSlide(slideIndex) {
+  tables.forEach((table, index) => {
+    if (index === slideIndex) {
+      table.classList.add("active");
+    } else {
+      table.classList.remove("active");
     }
   });
-});
+}
 
-// post-it modelos
-document.getElementById("modelos").addEventListener("click", function () {
-    var modal = document.getElementById("modelosAlert");
-    modal.style.display = "block";
-  
-    var closeButton = document.getElementsByClassName("close-button")[4];
-    closeButton.addEventListener("click", function () {
-      modal.style.display = "none";
-    });
-  
-    window.addEventListener("click", function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    });
-  });
+function prevTable() {
+  currentSlide = (currentSlide - 1 + tables.length) % tables.length;
+  showSlide(currentSlide);
+}
 
+function nextTable() {
+  currentSlide = (currentSlide + 1) % tables.length;
+  showSlide(currentSlide);
+}
 
-  document.getElementById("add").addEventListener("click", function () {
-    var modal = document.getElementById("addAlert");
-    modal.style.display = "block";
-
-    var closeButton = document.getElementsByClassName("close-btn")[0];
-    closeButton.addEventListener("click", function () {
-      modal.style.display = "none";
-    });
-
-    window.addEventListener("click", function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    });
-  });
-
-
-  document.getElementById("del").addEventListener("click", function () {
-    var modal = document.getElementById("delAlert");
-    modal.style.display = "block";
-
-    var closeButton = document.getElementsByClassName("close-btn")[1];
-    closeButton.addEventListener("click", function () {
-      modal.style.display = "none";
-    });
-
-    window.addEventListener("click", function (event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    });
-  });
-
+// Exibir a primeira tabela inicialmente
+showSlide(currentSlide);
 
 
 const items = document.querySelectorAll(".item");
@@ -219,21 +180,21 @@ function copyDivToClipboard() {
 }
 
 function addTema() {
-  var input = document.getElementById("tema").value; // Obtém o valor do input
-  var divsTema = document.querySelectorAll(".main_place"); // Obtém todas as divs com a classe "tema"
+  var input = document.getElementById("tema").value; 
+  var divsTema = document.querySelectorAll(".main_place"); 
 
   for (var i = 0; i < divsTema.length; i++) {
-    divsTema[i].innerText = input; // Define o valor do parágrafo em cada div
+    divsTema[i].innerText = input; 
   }
 }
 
 function addArgumento() {
-  var div1 = null; // Variável para armazenar a primeira div selecionada
-  var div2 = null; // Variável para armazenar a segunda div selecionada
+  var div1 = null; 
+  var div2 = null; 
 
   for (var i = 1; i <= 18; i++) {
     var divTexto = document.getElementById("arg" + i);
-    if (divTexto.classList.contains("selecionada")) {
+    if (divTexto.classList.contains("selecionado")) {
       if (div1 === null) {
         div1 = divTexto;
       } else if (div2 === null) {
@@ -257,6 +218,6 @@ function addArgumento() {
 }
 
 function selecionarDiv(div) {
-  div.classList.toggle("selecionada");
+  div.classList.toggle("selecionado");
   addArgumento();
 }

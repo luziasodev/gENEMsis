@@ -70,7 +70,6 @@ p {
   border-style: solid;
   border-color: transparent #ddc0ad transparent transparent;
   border-width: 18px 40px 12px;
-  
 }
 
 .pencil:after {
@@ -82,7 +81,6 @@ p {
   border-color: transparent #0f0e0e transparent transparent;
   border-width: 19px 41px 15px;
   transform: scale(0.3);
-  
 }
 
 .top {
@@ -113,7 +111,6 @@ p {
 
 .navbar {
   font-size: 13px;
-
 }
 
 /* Estilos do botão do nav */
@@ -144,7 +141,7 @@ p {
 
 .modal-content {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-  max-width: 500px;
+  max-width: 400px;
   padding: 20px;
   position: absolute;
   top: 50%;
@@ -171,18 +168,10 @@ p {
   background-color: #fdca8f;
 }
 
-.close-button {
-  float: right;
-  cursor: pointer;
-}
-
-.table-estrutura {
-  margin-top: 10px ;
-  font-size: 10px;
-}
-
-.table-estrutura p{
-  font-size: 10px;
+.table-estrutura th,
+.table-estrutura td {
+  padding: 8px;
+  text-align: center;
 }
 
 table {
@@ -191,16 +180,74 @@ table {
   width: 100%;
 }
 
-table, th, td {
+caption {
+  padding: 5px 0 5px 0;
+  font-weight: bold;
+}
+
+table,
+th,
+td {
   border: 1px dashed #000;
 }
 
-th, td {
-  padding: 8px;
-  text-align: center;
+.carousel {
+  position: relative;
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+  font-size: 10px;
 }
 
+.carousel-inner {
+  display: flex;
+  width: 200%;
+}
 
+.carousel-inner table {
+  flex: 0 0 50%;
+  border-collapse: collapse;
+  display: none;
+}
+
+.carousel-inner table.active {
+  display: table;
+}
+
+.carousel-inner th,
+.carousel-inner td {
+  padding: 8px;
+}
+
+.carousel-nav {
+  position: relative;
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.carousel-nav button {
+  font-weight: bold;
+  font-size: 15px;
+  background: none;
+  border: none;
+}
+
+.close-button {
+  float: right;
+  cursor: pointer;
+}
+
+.table-estrutura {
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.table-estrutura p {
+  font-size: 10px;
+}
 
 .container-redacao {
   display: grid;
@@ -314,7 +361,8 @@ th, td {
   cursor: pointer;
 }
 
-.selected {
+.selected,
+.selecionado {
   opacity: 0.3;
 }
 
@@ -400,6 +448,14 @@ th, td {
 
 .dev {
   position: relative;
-  margin-top: 19vh;
+  margin-top: 9vh;
   margin-bottom: 0;
+}
+
+.dev a {
+  color: #00a08c;
+}
+
+.dev a:hover {
+  color: rgb(212, 103, 216);
 }
