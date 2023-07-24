@@ -76,14 +76,15 @@ function nextTable() {
   showSlide(currentSlide);
 }
 
-// Exibir a primeira tabela inicialmente
 showSlide(currentSlide);
+
+//trechos da redação
 
 const items = document.querySelectorAll(".item");
 const redacao = document.querySelector(".redacao");
 
-for (let index = 0; index < items.length; index++) {
-  const HTMLElement = items[index];
+for (let i = 0; i < items.length; i++) {
+  const HTMLElement = items[i];
   HTMLElement.addEventListener("click", ({ target }) => {
     if (target.parentNode.classList.contains("redacao")) {
       return;
@@ -91,6 +92,26 @@ for (let index = 0; index < items.length; index++) {
 
     target.classList.toggle("selected");
   });
+}
+
+function copyDivToClipboard() {
+  var range = document.createRange();
+  range.selectNode(document.getElementById("copiar"));
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
+  document.execCommand("copy");
+  window.getSelection().removeAllRanges();
+}
+
+//substituição
+
+function addTema() {
+  var input = document.getElementById("tema").value;
+  var divsTema = document.querySelectorAll(".main_place");
+
+  for (var i = 0; i < divsTema.length; i++) {
+    divsTema[i].innerText = input;
+  }
 }
 
 redacao.addEventListener("click", ({ target }) => {
@@ -114,6 +135,42 @@ redacao.addEventListener("click", ({ target }) => {
     }
   }
 });
+
+function addArgumento() {
+  var div1 = null;
+  var div2 = null;
+
+  for (var i = 1; i <= 18; i++) {
+    var divTexto = document.getElementById("arg" + i);
+    if (divTexto.classList.contains("selecionado")) {
+      if (div1 === null) {
+        div1 = divTexto;
+      } else if (div2 === null) {
+        div2 = divTexto;
+      }
+    }
+  }
+
+  if (div1 !== null && div2 !== null) {
+    var div1_places = document.getElementsByClassName("arg1_place");
+    var div2_places = document.getElementsByClassName("arg2_place");
+
+    for (var j = 0; j < div1_places.length; j++) {
+      div1_places[j].innerText = div1.innerText;
+    }
+
+    for (var k = 0; k < div2_places.length; k++) {
+      div2_places[k].innerText = div2.innerText;
+    }
+  }
+}
+
+function selecionarDiv(div) {
+  div.classList.toggle("selecionado");
+  addArgumento();
+}
+
+//botões
 
 function readMore(hide) {
   let dots = document.querySelector(`.box[data-hide="${hide}"] .dots`);
@@ -169,56 +226,16 @@ function readMore3(hide3) {
   }
 }
 
-function copyDivToClipboard() {
-  var range = document.createRange();
-  range.selectNode(document.getElementById("copiar"));
-  window.getSelection().removeAllRanges();
-  window.getSelection().addRange(range);
-  document.execCommand("copy");
-  window.getSelection().removeAllRanges();
-}
+//formatar
+const copiar = document.getElementById("copiar");
+const formatar = document.getElementById("formatar");
 
-function addTema() {
-  var input = document.getElementById("tema").value; 
-  var divsTema = document.querySelectorAll(".main_place"); 
+formatar.addEventListener("click", function () {
+  const textarea = document.createElement("textarea");
 
-  for (var i = 0; i < divsTema.length; i++) {
-    divsTema[i].innerText = input;
-  }
-}
+  textarea.value = copiar.textContent;
 
-function addArgumento() {
-  var div1 = null; 
-  var div2 = null; 
+  textarea.className = "textareaDiv";
 
-  for (var i = 1; i <= 18; i++) {
-    var divTexto = document.getElementById("arg" + i);
-    if (divTexto.classList.contains("selecionado")) {
-      if (div1 === null) {
-        div1 = divTexto;
-      } else if (div2 === null) {
-        div2 = divTexto;
-      }
-    }
-  }
-
-  if (div1 !== null && div2 !== null) {
-    var div1_places = document.getElementsByClassName("arg1_place");
-    var div2_places = document.getElementsByClassName("arg2_place");
-
-    for (var j = 0; j < div1_places.length; j++) {
-      div1_places[j].innerText = div1.innerText;
-    }
-
-    for (var k = 0; k < div2_places.length; k++) {
-      div2_places[k].innerText = div2.innerText;
-    }
-  }
-}
-
-function selecionarDiv(div) {
-  div.classList.toggle("selecionado");
-  addArgumento();
-}
-
-
+  copiar.parentNode.replaceChild(textarea, copiar);
+});

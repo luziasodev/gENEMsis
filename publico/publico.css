@@ -142,6 +142,7 @@ p {
 .modal-content {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   max-width: 400px;
+  height: auto;
   padding: 20px;
   position: absolute;
   top: 50%;
@@ -158,14 +159,17 @@ p {
 }
 .modal-content.tutorial {
   background-color: #faed76;
+  width: 95%;
 }
 
 .modal-content.estrutura {
   background-color: pink;
+  width: auto;
 }
 
 .modal-content.competencias {
   background-color: #fdca8f;
+  width: auto;
 }
 
 .table-estrutura th,
@@ -430,20 +434,48 @@ td {
 }
 
 .btncontainer:hover {
-  color: #000;
+  background-color: #00a08c;
   max-width: 100%;
 }
 
-.redacao {
+.redacao,
+textarea {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.35);
   background: rgb(248, 253, 255);
   min-height: 310px;
+  width: 100%;
   flex-direction: column;
   padding: 10px;
 }
 
+textarea {
+  text-align: justify;
+}
+
 .redacao:hover {
   cursor: pointer;
+}
+
+.redacao-btn {
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  gap: 10px;
+}
+
+.redacao-btn button {
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f18b7e;
+}
+
+.redacao-btn button:hover {
+  background-color: #f55a45;
 }
 
 .dev {
