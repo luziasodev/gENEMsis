@@ -290,7 +290,7 @@ td {
   margin: 3px;
 }
 
-.rascunho {
+.container-rascunho {
   padding: 10px;
   margin: 3px;
 }
@@ -442,14 +442,15 @@ td {
 textarea {
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.35);
   background: rgb(248, 253, 255);
-  min-height: 310px;
   width: 100%;
-  flex-direction: column;
   padding: 10px;
+  min-height: 310px;
+  text-align: justify;
 }
 
-textarea {
+.textareaDiv {
   text-align: justify;
+  height: fit-content;
 }
 
 .redacao:hover {
@@ -458,7 +459,6 @@ textarea {
 
 .redacao-btn {
   display: flex;
-  
   align-items: center;
   justify-content: center;
   padding-top: 10px;

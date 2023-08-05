@@ -227,15 +227,17 @@ function readMore3(hide3) {
 }
 
 //formatar
-const copiar = document.getElementById("copiar");
+const rascunho = document.getElementById("rascunho");
 const formatar = document.getElementById("formatar");
 
 formatar.addEventListener("click", function () {
   const textarea = document.createElement("textarea");
 
-  textarea.value = copiar.textContent;
+  textarea.value = rascunho.textContent;
 
   textarea.className = "textareaDiv";
 
-  copiar.parentNode.replaceChild(textarea, copiar);
+  rascunho.parentNode.replaceChild(textarea, rascunho);
 });
+
+//copiar 
