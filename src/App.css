@@ -1,0 +1,10 @@
+header, footer {
+    text-align: center;
+}
+
+main {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
