@@ -81,12 +81,14 @@ showSlide(currentSlide);
 //trechos da redação
 
 const items = document.querySelectorAll(".item");
-const redacao = document.querySelector(".redacao");
 
 for (let i = 0; i < items.length; i++) {
   const HTMLElement = items[i];
   HTMLElement.addEventListener("click", ({ target }) => {
-    if (target.parentNode.classList.contains("redacao")) {
+    if (target.parentNode.classList.contains("redacao") ||
+      target.classList.contains("main_place") ||
+      target.classList.contains("arg1_place") ||
+      target.classList.contains("arg2_place")) {
       return;
     }
 
@@ -94,13 +96,13 @@ for (let i = 0; i < items.length; i++) {
   });
 }
 
-function copyDivToClipboard() {
-  var range = document.createRange();
-  range.selectNode(document.getElementById("copiar"));
-  window.getSelection().removeAllRanges();
-  window.getSelection().addRange(range);
-  document.execCommand("copy");
-  window.getSelection().removeAllRanges();
+async function copyDivToClipboard() {
+  const textoFormatado = document.getElementById("texto-formatado");
+  const content = textoFormatado.value;
+
+  await navigator.clipboard.writeText(content).then(
+    () => alert("O texto foi copiado com sucesso"),
+    () => alert("O texto não pode ser copiado"));
 }
 
 //substituição
@@ -114,11 +116,20 @@ function addTema() {
   }
 }
 
+const redacao = document.querySelector(".redacao");
+
 redacao.addEventListener("click", ({ target }) => {
   if (
     target.classList.contains("item") ||
-    target.classList.contains("main_place")
+    target.classList.contains("main_place") ||
+    target.classList.contains("arg1_place") ||
+    target.classList.contains("arg2_place")
   ) {
+    return;
+  }
+
+  if (target.parentNode.classList.contains("redacao") ||
+    target.classList.contains("main_place")) {
     return;
   }
 
@@ -231,13 +242,21 @@ const rascunho = document.getElementById("rascunho");
 const formatar = document.getElementById("formatar");
 
 formatar.addEventListener("click", function () {
+  const items = document.querySelectorAll("div#rascunho > div.item");
+  const phrases = [...items].map((item) => item.innerText)
+
+  phrases[4] && (phrases[4] += "\n    ")
+  phrases[10] && (phrases[10] += "\n    ")
+  phrases[16] && (phrases[16] += "\n    ")
+
+  console.log(phrases);
+  console.log(phrases.join(" "));
+
   const textarea = document.createElement("textarea");
+  textarea.id = "texto-formatado"
 
-  textarea.value = rascunho.textContent;
-
-  textarea.className = "textareaDiv";
-
-  rascunho.parentNode.replaceChild(textarea, rascunho);
+  rascunho.replaceWith(textarea);
+  textarea.value = "    " + phrases.join(" ");
 });
 
 //copiar 
