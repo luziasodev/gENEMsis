@@ -6,7 +6,7 @@ import Section from '../../Section/Section';
 import 'react-tabs/style/react-tabs.css';
 
 export default function Introduction() {
-  const sections = ["Alusão", "Intra-conectivos", "Problematização"];
+  const sections = ["alusão", "intra-conectivos", "problematização", "intra-conectivos", "tese", "argumentos"];
 
   return (
     <Tabs>

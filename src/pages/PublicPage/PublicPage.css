@@ -1,68 +1,114 @@
 .container {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-    border: 1px solid red;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 30px;
+  margin-bottom: 30px;
+  gap: 0px;
 }
 
 .container-repertorio,
 .container-redacao {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    justify-content: space-between;
+  justify-content: space-between;
 
-    flex-direction: column;
+  flex-direction: column;
+}
+
+.container-repertorio {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container-redacao {
+    margin-right: 20px;
+    margin-left: 20px
 }
 
 .redacao,
 .repertorio {
-    width: 100%;
-    min-height: 310px;
-    border: 1px solid rgb(162, 0, 255);
+  width: 100%;
+  min-height: 330px;
+  font-style: italic;
 }
 
 .repertorio {
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
-    background-color: rgb(169, 226, 223);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+  background-color: rgb(169, 226, 223);
 }
 
 .redacao {
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.35);
-    background: rgb(248, 253, 255);
-    width: 100%;
-
-    padding: 10px;
-    min-height: 310px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.35);
+  background: rgb(248, 253, 255);
+  width: 100%;
+  padding: 10px;
+  min-height: 310px;
 }
 
 .caixatema {
-    padding: 10px;
-    margin: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  margin: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 
-    font-size: 90%;
-    font-weight: 300;
+  font-size: 90%;
+  font-weight: 300;
 
-    color: #6e6e6e;
+  color: #6e6e6e;
 
-    font-style: italic;
+  font-style: italic;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #tema {
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    font-style: italic;
-    font-size: 24px;
-    text-align: center;
-    
-    border: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-style: italic;
+  font-size: 24px;
+  text-align: center;
+  border: none;
 }
 
-.react-tabs__tab--selected, .react-tabs__tab-panel--selected {
-    background-color: rgba(98, 197, 201, 0.842);
+input {
+  width: 300px;
+}
+
+.react-tabs {
+    padding: 13px;
+}
+
+.react-tabs__tab {
+  background: rgb(175, 222, 228);
+  border-top-left-radius: 1rem;
+  border-color: rgba(63, 129, 131, 0.842);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.35);
+}
+
+.react-tabs__tab--selected,
+.react-tabs__tab-panel--selected {
+  height: 100%;
+  padding: 10px;
+}
+
+.react-tabs__tab--selected {
+  background: rgba(98, 197, 201, 0.842);
+}
+
+.react-tabs__tab-panel--selected {
+  background: rgb(175, 222, 228);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+}
+
+.estrutura {
+  font-size: 1rem;
+}
+
+.secao {
+  font-size: 0.95rem;
+  background-color: rgba(98, 197, 201, 0.842);
+
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
 }

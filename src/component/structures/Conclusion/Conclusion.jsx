@@ -7,7 +7,7 @@ import Section from '../../Section/Section';
 import 'react-tabs/style/react-tabs.css';
 
 export default function Conclusion() {
-  const sections = ["inter-conectivos", "tópico frasal", "intra-conectivos"];
+  const sections = ["inter-conectivos", "tópico frasal", "intra-conectivos", "intervenção", "intra-conectivos", "fechamento"];
 
   return (
     <Tabs>

@@ -15,7 +15,7 @@ function App() {
 
   return <>
     <Header />
-    <PencilBar>Sobre</PencilBar>
+    <PencilBar></PencilBar>
 
     {
       (state) ? (state == 1) 
