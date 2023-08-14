@@ -17,8 +17,6 @@ function App() {
     <Header />
     <PencilBar>Sobre</PencilBar>
 
-    <span>{state}</span>
-
     {
       (state) ? (state == 1) 
         ? <PublicPage /> : 
