@@ -440,6 +440,7 @@ td {
 
 .redacao,
 textarea {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.35);
   background: rgb(248, 253, 255);
   width: 100%;

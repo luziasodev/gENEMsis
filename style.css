@@ -165,16 +165,18 @@ p {
 }
 
 .acervo {
-  display: grid;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
   gap: 25px;
   margin-top: 60px;
 }
 
 .user {
   display: flex;
+  flex: 1;
+  min-width: 250px;
   align-items: center;
   justify-content: center;
   font-size: 1.3em;
@@ -187,6 +189,7 @@ p {
 #user2 {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
   cursor: pointer;
+  max-width: 400px;
 }
 
 #user1 {
@@ -197,6 +200,12 @@ p {
 #user2 {
   border: 2px solid rgb(229, 243, 191);
   background-color: rgb(229, 243, 191);
+}
+
+#user1:hover,
+#user2:hover {
+  background-color: white;
+  border: none;
 }
 
 .modal-content.user2 {
