@@ -1,11 +1,6 @@
 
 <h1 align="center">
-  <br>
-  <a href="https://luziasodev.github.io/textgENEMrator/">
-  <img src="Logo_ENEM_DIGITAL_Colorido-fococ.png" alt="icon" width="200">
-  </a>
-  <br>
-  text gENEMrator
+  textgenemrator
   <br>
   <p align="center">
   <img src="https://img.shields.io/badge/stability-beta-33bbff.svg">
@@ -23,7 +18,7 @@
 
 <p align="center">
   <a href="https://luziasodev.github.io/textgENEMrator/">
-    <img src="https://user-images.githubusercontent.com/89281588/191029659-7ec6780c-f6d2-4911-a7de-d158749ec597.png" width=70%>
+    <img src="./assets/icons/txtgenem.png" width=50%>
   </a>
 
 ## Key Features
@@ -34,9 +29,9 @@
 
 ## Como Usar
 
-* Rolagem de tela e seleção de blocos. 
+* Seleção de blocos e edição de texto.
 
-No final da página, há uma caixa vazia contornada, onde se gera a redação com um clique. O modelo pode ser copiado e formatado para estudo de um tema específico. A ideia é agilizar a produção de texto, sem tirar a essência do processo criativo - este explicado em um link no subtítulo da página, junto ao redirecionamento para o CIRA (Corretor Inteligente de Redações Automático). 
+Após selecionar os repertórios desejados, um clique na caixa branca gera o esqueleto da redação. O modelo pode ser formatado, editado e copiado para estudo de um tema específico. A ideia é disponibilizar repertórios e agilizar a produção de texto, sem tirar a essência do processo criativo. 
 
 >
 
@@ -46,7 +41,7 @@ No final da página, há uma caixa vazia contornada, onde se gera a redação co
 
 ## Suporte
 
-Contribua com a melhoria do site enviando repertório e códigos, seja em PULL REQUEST ou  
+Contribua com a melhoria do projeto enviando repertórios e/ou códigos no Pull request.  
 
 </a>
 
