@@ -1,6 +1,6 @@
 
 <h1 align="center">
-  textgenemrator
+  gENEMsis
   <br>
   <p align="center">
   <img src="https://img.shields.io/badge/stability-beta-33bbff.svg">
@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <a href="https://luziasodev.github.io/textgENEMrator/">
+  <a href="https://luziasodev.github.io/gENEMsis/">
     <img src="./assets/icons/txtgenem.png" width=50%>
   </a>
 
