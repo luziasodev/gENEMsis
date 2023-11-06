@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="./assets/icons/Logo_ENEM_DIGITAL_Colorido-fococ.png"
+    />
+    <title>gENEMsis</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <a href="index.html" target="_blank">
+        <h3>✧.*✎*.✧</h3>
+        <h1>g<font color="#4682B4">enem</font>sis</h1>
+      </a>
+    </header>
+
+    <div class="pencil">
+      <div id="sobre" class="navbar sobreDiv">SOBRE</div>
+      <div class="top"></div>
+    </div>
+
+    <div id="sobreAlert" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>SOBRE</h2>
+        <div class="text">
+          <p>
+            O textgENEMrator é uma biblioteca interativa de repertórios
+            científicos e socioculturais que otimiza o processo criativo e
+            auxilia a produzir modelos de redações.
+          </p>
+          <p>
+            O acervo público tem como objetivo principal reunir múltiplas ideias
+            trabalhadas no ensino médio e universitário.
+          </p>
+          <p>
+            O acervo pessoal, além disso, permite a montagem da própria
+            biblioteca e o arquivamento de redações, com planos para docentes e
+            estudantes.
+          </p>
+          <p>
+            Recomenda-se reescrever o modelo gerado com seu próprio vocabulário,
+            aprofundar o entendimento sobre as referências e consultar
+            professores. Bons estudos!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="acervo">
+        <div class="user" id="user1">
+          <h3><a href="./publico/publico.html">Acervo Público</a></h3>
+        </div>
+        <div class="user" id="user2">
+          <h3>Acervo Pessoal</h3>
+        </div>
+      </div>
+    </section>
+
+    <div id="user2Alert" class="modal">
+      <div class="modal-content user2">
+        <span class="close-button">&times;</span>
+
+        <div class="text">
+          <p>
+            Quer hospedar repertórios e redações em um acervo personalizado?
+            <br />
+            Escolha planos de assinatura por menos de 20 reais ao mês.
+          </p>
+          <p></p>
+          <button onclick="cadastroAlerta()">Cadastro</button>
+        </div>
+        <hr />
+        <div class="text">
+          <p>Já possui uma conta?</p>
+          <form onsubmit="return verificarCredencial()">
+            <div class="form-group">
+              <label for="username">usuário:</label>
+              <input type="text" id="username" name="username" required />
+            </div>
+
+            <div class="form-group">
+              <label for="password">senha:</label>
+              <input type="password" id="password" name="password" required />
+            </div>
+
+            <div class="form-group">
+              <input type="submit" value="acessar" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="dev">
+        <h3>
+          <p>
+            Seja um colaborador do projeto. Envie sugestões de repertórios no
+            <a
+              href="https://github.com/luziasodev/textgENEMrator"
+              target="_blank"
+            >
+              GitHub</a
+            >
+          </p>
+          <br />
+          <p>
+            Desenvolvido por <a href="https://github.com/luziasodev">Luzia</a> e
+            <a href="https://github.com/ImGabe">Gabriel</a>
+          </p>
+          <p>2022</p>
+        </h3>
+      </div>
+    </footer>
+  </body>
+</html>
